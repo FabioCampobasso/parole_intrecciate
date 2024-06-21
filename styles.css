@@ -1,0 +1,209 @@
+html, body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    max-height: 100vh;
+    margin-top: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px); /* Cambiato da 10 a 15 */
+    grid-template-rows: repeat(15, 30px); 
+    gap: 2px;
+    margin: 20px auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    
+}
+
+.grid div {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;  /* Roboto Bold */
+    position: relative;
+}
+
+.grid div span {
+    display: inline-block;
+    transition: transform 0.6s, color 0.6s;
+    transition-delay: 0s;
+}
+
+.grid div.selected span {
+    color: rgb(90, 90, 90);
+}
+
+.grid div.correct span {
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;  /* Roboto Bold */
+    transform: rotateY(360deg);
+}
+
+#word-search-container {
+    position: relative;
+    background-color: white;
+    border-radius: 2rem;
+    width: 100%;
+}
+
+#word-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 30px);
+    grid-template-rows: repeat(15, 30px);
+    gap: 2px;
+    position: relative;
+    width: max-content;
+    z-index: 3;
+}
+
+#word-grid div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 3;
+}
+
+#word-grid div span {
+    transition: color 0.3s ease, transform 0.6s ease;
+}
+
+.canvas-container {
+    position: relative;
+    width: max-content;
+}
+
+#fixed-canvas, #selection-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#word-search-container {
+    position: relative;
+    width: max-content;
+    margin: auto; 
+}
+
+.show-selection-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Assicurati che il contenitore flessibile occupi il 100% della larghezza disponibile */
+}
+
+#selected-word-display {
+    flex: 7; /* Occupa circa il 70% dello spazio */
+}
+
+/* Assicurati che i padding e margini dei singoli elementi non influenzino il layout complessivo */
+.selected-word-display {
+    height: 1rem;
+    text-align: center; 
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 2rem 0rem 0rem 2rem;
+    margin: 0; /* Rimuovi margini di default */
+}
+
+#menuButton {
+    flex: 3; /* Occupa circa il 30% dello spazio */
+    margin-left: auto; /* Spinge il bottone all'estrema destra */
+    height: 3rem;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;  /* Roboto Bold */
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0rem 2rem 2rem 0rem;
+
+    text-align: center; /* Assicura che il testo sia centrato */
+}
+
+
+
+.side-menu {
+    height: 100%;  /* Assicurati che copra l'altezza completa se necessario */
+    width: 0;      /* Imposta la larghezza iniziale a 0 */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: black;
+    transition: width 0.5s; /* Transizione fluida per la larghezza */
+    padding-top: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: white;
+}
+
+article{
+    padding: 1rem;
+    background-color: yellow;
+    margin: 1rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+h2{
+    margin: 1rem;
+    text-align: center;
+    color: white;
+    white-space: nowrap;;
+}
+
+.word-count-badge {
+    position: absolute;
+    background-color: yellow;
+    color: black;
+    font-size: 0.75em;
+    padding: 3px;
+    margin-left: 1rem;
+    border-radius: 2rem; /* Rende il badge circolare */
+    position: relative;
+    display: inline-block;
+    min-width: 20px; /* Assicura che il badge sia abbastanza grande */
+    text-align: center;
+}
+
+
+
+
