@@ -37,7 +37,6 @@ fixedCanvas.height = wordGridElement.offsetHeight;
 function createGrid() {
     wordGridElement.style.gridTemplateColumns = `repeat(${grid[0].length}, 1fr)`;
     wordGridElement.style.gridTemplateRows = `repeat(${grid.length}, 1fr)`;
-
     grid.forEach((row, rowIndex) => {
         row.forEach((letter, colIndex) => {
             const cell = document.createElement('div');
@@ -47,10 +46,15 @@ function createGrid() {
             cell.dataset.col = colIndex;
             cell.appendChild(span);
 
-            cell.addEventListener('pointerdown', startSelection);
-            cell.addEventListener('pointermove', continueSelection);
-            cell.addEventListener('pointerup', endSelection);
-            cell.addEventListener('pointercancel', endSelection);
+            cell.addEventListener('mousedown', startSelection);
+            cell.addEventListener('mouseover', continueSelection);
+            cell.addEventListener('mouseup', endSelection);
+
+            // Add touch event listeners
+            cell.addEventListener('touchstart', startSelection, { passive: false });
+            cell.addEventListener('touchmove', continueSelection, { passive: false });
+            cell.addEventListener('touchend', endSelection, { passive: false });
+
             wordGridElement.appendChild(cell);
         });
     });
@@ -63,25 +67,26 @@ function startSelection(event) {
     startCell = event.target.closest('div');
     selectCell(startCell);
     displaySelectedWord();
-    const clientX = event.clientX;
-    const clientY = event.clientY;
+    const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+    const clientY = event.touches ? event.touches[0].clientY : event.clientY;
     drawLineToCellCenter(startCell, clientX, clientY);
-    event.target.setPointerCapture(event.pointerId); // Cattura gli eventi di puntamento
 }
 
 function continueSelection(event) {
     event.preventDefault();
     if (isSelecting) {
-        const clientX = event.clientX;
-        const clientY = event.clientY;
-        const endCell = document.elementFromPoint(clientX, clientY).closest('div');
-        if (endCell) {
-            selectCellsInLine(startCell, endCell);
+        const touch = event.touches ? event.touches[0] : null;
+        const cell = touch ? document.elementFromPoint(touch.clientX, touch.clientY).closest('div') : event.target.closest('div');
+        if (cell && cell !== startCell) {
+            selectCellsInLine(startCell, cell);
             displaySelectedWord();
+            const clientX = touch ? touch.clientX : event.clientX;
+            const clientY = touch ? touch.clientY : event.clientY;
             drawLineToCellCenter(startCell, clientX, clientY);
         }
     }
 }
+
 
 function endSelection(event) {
     event.preventDefault();
@@ -94,10 +99,11 @@ function endSelection(event) {
     dynamicCtx.clearRect(0, 0, dynamicCanvas.width, dynamicCanvas.height);
 }
 
-export function selectCell(cell) {
+function selectCell(cell) {
     if (!cell.classList.contains('selected')) {
         cell.classList.add('selected');
         selectedCells.push(cell);
+        
     }
 }
 
@@ -116,10 +122,18 @@ function updateWordCount() {
 function checkWord() {
     const selectedWord = selectedCells.map(cell => cell.textContent).join('');
     const reversedSelectedWord = selectedCells.map(cell => cell.textContent).reverse().join('');
-    if ((words.includes(selectedWord) || words.includes(reversedSelectedWord)) && !guessedWords.includes(selectedWord)) {
-        guessedWords.push(selectedWord);
-        addWordToSideMenu();
-        updateWordCount();
+    let correctWord = null;
+
+    if (words.includes(selectedWord)) {
+        correctWord = selectedWord;
+    } else if (words.includes(reversedSelectedWord)) {
+        correctWord = reversedSelectedWord;
+    }
+
+    if (correctWord && !guessedWords.includes(correctWord)) {
+        guessedWords.push(correctWord);
+        addWordToSideMenu();  
+        updateWordCount();   
         addTransitionDelays();
         selectedCells.forEach(cell => cell.classList.add('correct'));
 
@@ -138,14 +152,12 @@ function addWordToSideMenu() {
     const sideMenu = document.getElementById('sideMenu');
     sideMenu.innerHTML = '<h2>Parole Indovinate</h2>';  // Pulisce il contenuto precedente del sideMenu
 
-    // Aggiunge ogni parola indovinata al sideMenu come un nuovo div
     guessedWords.forEach(word => {
         const wordDiv = document.createElement('article');
         wordDiv.textContent = word;
         sideMenu.appendChild(wordDiv);
     });
 }
-
 function addTransitionDelays() {
     selectedCells.forEach((cell, index) => {
         cell.querySelector('span').style.transitionDelay = `${index * 0.1}s`;
@@ -180,12 +192,12 @@ function selectCellsInLine(startCell, endCell) {
     }
 }
 
-function drawLineToCellCenter(startCell, endX, endY) {
+function drawLineToCellCenter(startCell, clientX, clientY) {
     const rect = wordGridElement.getBoundingClientRect();
     const startX = startCell.offsetLeft + startCell.offsetWidth / 2;
     const startY = startCell.offsetTop + startCell.offsetHeight / 2;
 
-    const endCell = document.elementFromPoint(endX, endY);
+    const endCell = document.elementFromPoint(clientX, clientY);
     if (!endCell || !endCell.closest('#word-grid > div')) return;
     const targetCell = endCell.closest('#word-grid > div');
 
@@ -193,7 +205,7 @@ function drawLineToCellCenter(startCell, endX, endY) {
     const adjustedEndX = targetRect.left + targetRect.width / 2 - rect.left;
     const adjustedEndY = targetRect.top + targetRect.height / 2 - rect.top;
 
-    const circleDiameter = 40;
+    const circleDiameter = 35;
     const circleRadius = circleDiameter / 2;
 
     dynamicCtx.clearRect(0, 0, dynamicCanvas.width, dynamicCanvas.height);
@@ -202,7 +214,7 @@ function drawLineToCellCenter(startCell, endX, endY) {
     dynamicCtx.moveTo(startX, startY);
     dynamicCtx.lineTo(adjustedEndX, adjustedEndY);
     dynamicCtx.strokeStyle = 'rgb(200, 200, 200)';
-    dynamicCtx.lineWidth = 40;
+    dynamicCtx.lineWidth = 35;
     dynamicCtx.stroke();
 
     dynamicCtx.beginPath();
@@ -227,7 +239,7 @@ function drawFixedLineForSelection(color) {
     const endX = endCell.offsetLeft + endCell.offsetWidth / 2;
     const endY = endCell.offsetTop + endCell.offsetHeight / 2;
 
-    const circleDiameter = 40;
+    const circleDiameter = 35;
     const circleRadius = circleDiameter / 2;
 
     // Disegna la linea
@@ -235,7 +247,7 @@ function drawFixedLineForSelection(color) {
     fixedCtx.moveTo(startX, startY);
     fixedCtx.lineTo(endX, endY);
     fixedCtx.strokeStyle = color;
-    fixedCtx.lineWidth = 40;
+    fixedCtx.lineWidth = 35;
     fixedCtx.stroke();
 
     // Disegna il cerchio iniziale
