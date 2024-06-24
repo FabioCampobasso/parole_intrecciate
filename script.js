@@ -50,17 +50,23 @@ function createGrid() {
             cell.addEventListener('mousedown', startSelection);
             cell.addEventListener('mouseover', continueSelection);
             cell.addEventListener('mouseup', endSelection);
+            cell.addEventListener('touchstart', startSelection);
+            cell.addEventListener('touchmove', continueSelection);
+            cell.addEventListener('touchend', endSelection);
             wordGridElement.appendChild(cell);
         });
     });
 }
+
 function startSelection(event) {
     clearSelection();
     isSelecting = true;
     startCell = event.target.closest('div');
     selectCell(startCell);
-    displaySelectedWord(); 
-    drawLineToCellCenter(startCell, event.clientX, event.clientY);
+    displaySelectedWord();
+    const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+    const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+    drawLineToCellCenter(startCell, clientX, clientY);
 }
 
 function continueSelection(event) {
@@ -68,15 +74,17 @@ function continueSelection(event) {
         const cell = event.target.closest('div');
         if (cell) {
             selectCellsInLine(startCell, cell);
-            displaySelectedWord();  
-            drawLineToCellCenter(startCell, event.clientX, event.clientY);
+            displaySelectedWord();
+            const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+            const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+            drawLineToCellCenter(startCell, clientX, clientY);
         }
     }
 }
 
 function endSelection() {
     isSelecting = false;
-    displaySelectedWord(); 
+    displaySelectedWord();
     if (checkWord()) {
         drawFixedLineForSelection('yellow');
     }
@@ -96,23 +104,23 @@ export function clearSelection() {
     selectedCells = [];
 }
 
-let guessedWords = [];  
+let guessedWords = [];
 
 function updateWordCount() {
     const wordCountBadge = document.getElementById('wordCount');
-    wordCountBadge.textContent = guessedWords.length; 
+    wordCountBadge.textContent = guessedWords.length;
 }
 
 function checkWord() {
     const selectedWord = selectedCells.map(cell => cell.textContent).join('');
     const reversedSelectedWord = selectedCells.map(cell => cell.textContent).reverse().join('');
     if ((words.includes(selectedWord) || words.includes(reversedSelectedWord)) && !guessedWords.includes(selectedWord)) {
-        guessedWords.push(selectedWord);  
-        addWordToSideMenu();  
-        updateWordCount();   
+        guessedWords.push(selectedWord);
+        addWordToSideMenu();
+        updateWordCount();
         addTransitionDelays();
         selectedCells.forEach(cell => cell.classList.add('correct'));
-        
+
         return true;
     }
     clearSelection();
@@ -194,7 +202,7 @@ function drawLineToCellCenter(startCell, endX, endY) {
     dynamicCtx.strokeStyle = 'rgb(200, 200, 200)';
     dynamicCtx.lineWidth = 40;
     dynamicCtx.stroke();
-    
+
     dynamicCtx.beginPath();
     dynamicCtx.arc(startX, startY, circleRadius, 0, 2 * Math.PI, false);
     dynamicCtx.fillStyle = 'rgb(200, 200, 200)';
@@ -268,4 +276,3 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-
