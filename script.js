@@ -49,8 +49,6 @@ function createGrid() {
             cell.addEventListener('mousedown', startSelection);
             cell.addEventListener('mouseover', continueSelection);
             cell.addEventListener('mouseup', endSelection);
-
-            // Add touch event listeners
             cell.addEventListener('touchstart', startSelection, { passive: false });
             cell.addEventListener('touchmove', continueSelection, { passive: false });
             cell.addEventListener('touchend', endSelection, { passive: false });
@@ -107,11 +105,13 @@ function selectCell(cell) {
     }
 }
 
+//RIPULISCI LA SELEZIONE
 export function clearSelection() {
     selectedCells.forEach(cell => cell.classList.remove('selected'));
     selectedCells = [];
 }
 
+//PAROLE SELEZIONATE
 let guessedWords = [];
 
 function updateWordCount() {
@@ -121,13 +121,15 @@ function updateWordCount() {
 
 // Aggiorna anche all'inizializzazione se l'array ha contenuti iniziali
 document.addEventListener('DOMContentLoaded', function() {
-    updateWordCount();  // Assicurati che il conteggio sia aggiornato quando la pagina viene caricata
+    updateWordCount();  
 });
 
+//CREA PULSANTI CON ARTISTI TROVATI
 function addWordToSideMenu() {
     const sideMenu = document.getElementById('sideMenu');
     sideMenu.innerHTML = '<h2>Parole Indovinate</h2>';  // Pulisce il contenuto precedente del sideMenu
-
+    const conteainerWordDiv = document.createElement('main');
+    sideMenu.appendChild(conteainerWordDiv);
     guessedWords.forEach(word => {
         const wordDiv = document.createElement('article');
         wordDiv.textContent = word;
@@ -137,7 +139,7 @@ function addWordToSideMenu() {
                 showPopup(artist);
             }
         });
-        sideMenu.appendChild(wordDiv);
+        conteainerWordDiv.appendChild(wordDiv);
     });
 }
 function addTransitionDelays() {
@@ -146,6 +148,7 @@ function addTransitionDelays() {
     });
 }
 
+//SELEZIONE CELLE IN LINEA
 function selectCellsInLine(startCell, endCell) {
     clearSelection();
     const startRow = parseInt(startCell.dataset.row);
@@ -174,6 +177,7 @@ function selectCellsInLine(startCell, endCell) {
     }
 }
 
+//CREAZIONE LINEA DI SELEZIONE
 function drawLineToCellCenter(startCell, clientX, clientY) {
     const rect = wordGridElement.getBoundingClientRect();
     const startX = startCell.offsetLeft + startCell.offsetWidth / 2;
@@ -210,6 +214,7 @@ function drawLineToCellCenter(startCell, clientX, clientY) {
     dynamicCtx.fill();
 }
 
+//CREA LINEA EVIDENZIATORE GIALLA
 function drawFixedLineForSelection(color) {
     if (selectedCells.length < 2) return;
 
@@ -247,33 +252,35 @@ function drawFixedLineForSelection(color) {
 
 createGrid();
 
+// MOSTRA LETTERE SELEZIONATE
 function displaySelectedWord() {
     const wordDisplay = document.getElementById('selected-word-display');
     const selectedWord = selectedCells.map(cell => cell.textContent).join('');
-    wordDisplay.textContent = selectedWord; // Mostra la parola selezionata o stringa vuota
+    wordDisplay.textContent = selectedWord;
 }
 
+// GESTIONE MENU LATERALE
 document.addEventListener('click', function(event) {
     var menu = document.getElementById('sideMenu');
     var menuButton = document.getElementById('menuButton');
 
-    // Controlla se il click è avvenuto sul pulsante del menu
     if (menuButton.contains(event.target)) {
         // Se il menu è già aperto, chiudilo; altrimenti, aprilo
-        if (menu.style.width === '250px') {
+        if (menu.style.width === '70%') {
             menu.style.width = '0';
         } else {
-            menu.style.width = '250px';
+            menu.style.width = '70%';
         }
     } else if (!menu.contains(event.target)) {
         // Se il click è fuori dal menu, chiudi il menu
-        if (menu.style.width === '250px') {
+        if (menu.style.width === '70%') {
             menu.style.width = '0';
         }
     }
 });
 
-let artistData = null; // Variabile globale per memorizzare i dati degli artisti
+//FETCH DATI SUGLI ARTISTI
+let artistData = null; 
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch('artists.json')
@@ -289,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching artist data:', error));
 });
 
+//MOSTRA IL POPUP
 function showPopup(artist) {
     const popup = document.createElement('div');
     popup.classList.add('popup');
@@ -310,7 +318,7 @@ function showPopup(artist) {
     artistButton.classList.add('artist-button');
     artistButton.href = artist.button;
     artistButton.target = '_blank';
-    artistButton.textContent = "Biglietti";
+    artistButton.textContent = "BIGLIETTI";
 
     const closeButton = document.createElement('button');
     closeButton.classList.add('close-button');
@@ -330,6 +338,7 @@ function showPopup(artist) {
     setTimeout(() => popup.classList.add('show'), 10); // Trigger animation
 }
 
+// CONTROLLA SE LA PAROLA SELEZIONATA è CORRETTA
 function checkWord() {
     const selectedWord = selectedCells.map(cell => cell.textContent).join('');
     const reversedSelectedWord = selectedCells.map(cell => cell.textContent).reverse().join('');

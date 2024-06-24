@@ -1,6 +1,5 @@
 html,
 body {
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -9,6 +8,7 @@ body {
   background-color: lightgray;
   overflow: hidden;
 }
+
 
 html {
   overflow: auto;
@@ -39,9 +39,9 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700; /* Roboto Bold */
+  font-size: 1.3rem;
+  font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700; /* Roboto Bold */
   position: relative;
 }
 
@@ -67,6 +67,8 @@ html {
   background-color: white;
   border-radius: 2rem;
   width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 #word-grid {
@@ -117,11 +119,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; /* Assicurati che il contenitore flessibile occupi il 100% della larghezza disponibile */
+  width: 100%; 
 }
 
 #selected-word-display {
-  flex: 7; /* Occupa circa il 70% dello spazio */
+  flex: 7; 
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 /* Assicurati che i padding e margini dei singoli elementi non influenzino il layout complessivo */
@@ -131,7 +135,7 @@ html {
   background-color: #fff;
   padding: 1rem;
   border-radius: 2rem 0rem 0rem 2rem;
-  margin: 0; /* Rimuovi margini di default */
+  margin: 0;
 }
 
 #menuButton {
@@ -159,11 +163,17 @@ html {
   right: 0;
   background-color: black;
   transition: width 0.5s; /* Transizione fluida per la larghezza */
-  padding-top: 60px;
+  padding-top: 20px;
   justify-content: center;
   align-items: center;
   z-index: 5;
-  overflow: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+main{
+    overflow-y: scroll;
+    height: 80%;
 }
 
 .side-menu a {
@@ -185,6 +195,8 @@ article {
   margin: 1rem;
   border-radius: 2rem;
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 h2 {
@@ -234,6 +246,8 @@ h2 {
   margin-block-start: 0px;
   font-size: 2em;
   color: #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .artist-date {
@@ -241,6 +255,8 @@ h2 {
   margin-block-start: 0.2rem;
   font-size: 1.5em;
   color: #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .artist-venue {
@@ -248,6 +264,8 @@ h2 {
   margin-block-start: 0.2rem;;
   font-size: 1em;
   color: #000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .artist-button {
@@ -258,7 +276,10 @@ h2 {
   text-decoration: none;
   border-radius: 2rem;
   transition: background-color 0.3s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
+
 
 .close-button {
   position: absolute;
@@ -271,6 +292,8 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .close-button:hover {
