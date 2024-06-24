@@ -119,30 +119,6 @@ function updateWordCount() {
     wordCountBadge.textContent = guessedWords.length;
 }
 
-function checkWord() {
-    const selectedWord = selectedCells.map(cell => cell.textContent).join('');
-    const reversedSelectedWord = selectedCells.map(cell => cell.textContent).reverse().join('');
-    let correctWord = null;
-
-    if (words.includes(selectedWord)) {
-        correctWord = selectedWord;
-    } else if (words.includes(reversedSelectedWord)) {
-        correctWord = reversedSelectedWord;
-    }
-
-    if (correctWord && !guessedWords.includes(correctWord)) {
-        guessedWords.push(correctWord);
-        addWordToSideMenu();  
-        updateWordCount();   
-        addTransitionDelays();
-        selectedCells.forEach(cell => cell.classList.add('correct'));
-
-        return true;
-    }
-    clearSelection();
-    return false;
-}
-
 // Aggiorna anche all'inizializzazione se l'array ha contenuti iniziali
 document.addEventListener('DOMContentLoaded', function() {
     updateWordCount();  // Assicurati che il conteggio sia aggiornato quando la pagina viene caricata
@@ -155,6 +131,12 @@ function addWordToSideMenu() {
     guessedWords.forEach(word => {
         const wordDiv = document.createElement('article');
         wordDiv.textContent = word;
+        wordDiv.addEventListener('click', () => {
+            const artist = artistData.find(a => a.nome === word);
+            if (artist) {
+                showPopup(artist);
+            }
+        });
         sideMenu.appendChild(wordDiv);
     });
 }
@@ -290,3 +272,91 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+
+let artistData = null; // Variabile globale per memorizzare i dati degli artisti
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('artists.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            artistData = data.artists;
+        })
+        .catch(error => console.error('Error fetching artist data:', error));
+});
+
+function showPopup(artist) {
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.id = 'popup';
+
+    const artistName = document.createElement('h1');
+    artistName.classList.add('artist-name');
+    artistName.textContent = artist.nome;
+
+    const artistDate = document.createElement('h5');
+    artistDate.classList.add('artist-date');
+    artistDate.textContent = artist.data;
+
+    const artistVenue = document.createElement('h2');
+    artistVenue.classList.add('artist-venue');
+    artistVenue.textContent = artist.venue;
+
+    const artistButton = document.createElement('a');
+    artistButton.classList.add('artist-button');
+    artistButton.href = artist.button;
+    artistButton.target = '_blank';
+    artistButton.textContent = "Biglietti";
+
+    const closeButton = document.createElement('button');
+    closeButton.classList.add('close-button');
+    closeButton.textContent = "X";
+    closeButton.onclick = () => {
+        popup.classList.remove('show');
+        setTimeout(() => popup.remove(), 300); // Wait for animation to finish
+    };
+
+    popup.appendChild(artistName);
+    popup.appendChild(artistDate);
+    popup.appendChild(artistVenue);
+    popup.appendChild(artistButton);
+    popup.appendChild(closeButton);
+
+    document.body.appendChild(popup);
+    setTimeout(() => popup.classList.add('show'), 10); // Trigger animation
+}
+
+function checkWord() {
+    const selectedWord = selectedCells.map(cell => cell.textContent).join('');
+    const reversedSelectedWord = selectedCells.map(cell => cell.textContent).reverse().join('');
+    let correctWord = null;
+
+    if (words.includes(selectedWord)) {
+        correctWord = selectedWord;
+    } else if (words.includes(reversedSelectedWord)) {
+        correctWord = reversedSelectedWord;
+    }
+
+    if (correctWord && !guessedWords.includes(correctWord)) {
+        guessedWords.push(correctWord);
+        const artist_name = correctWord;
+
+        const artist = artistData.find(a => a.nome === artist_name);
+        if (artist) {
+            showPopup(artist);
+        }
+
+        addWordToSideMenu();  
+        updateWordCount();   
+        addTransitionDelays();
+        selectedCells.forEach(cell => cell.classList.add('correct'));
+
+        return true;
+    }
+    clearSelection();
+    return false;
+}

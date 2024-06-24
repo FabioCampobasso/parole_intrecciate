@@ -1,0 +1,65 @@
+{
+    "artists": [
+      {
+        "nome": "MENGONI",
+        "data": "10 luglio 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/mengoni"
+      },
+      {
+        "nome": "ANNALISA",
+        "data": "15 luglio 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/annalisa"
+      },
+      {
+        "nome": "ULTIMO",
+        "data": "20 luglio 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/ultimo"
+      },
+      {
+        "nome": "ELODIE",
+        "data": "25 luglio 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/elodie"
+      },
+      {
+        "nome": "FEDEZ",
+        "data": "30 luglio 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/fedez"
+      },
+      {
+        "nome": "ACHILLELAURO",
+        "data": "05 agosto 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/achillelauro"
+      },
+      {
+        "nome": "LEVANTE",
+        "data": "10 agosto 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/levante"
+      },
+      {
+        "nome": "MADAME",
+        "data": "15 agosto 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/madame"
+      },
+      {
+        "nome": "IRAMA",
+        "data": "20 agosto 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/irama"
+      },
+      {
+        "nome": "MAHMOOD",
+        "data": "25 agosto 2024",
+        "venue": "Teatro Colosseo, Torino",
+        "button": "https://example.com/mahmood"
+      }
+    ]
+  }
+  
