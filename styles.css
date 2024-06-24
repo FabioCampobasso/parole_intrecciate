@@ -9,6 +9,10 @@ html, body {
     overflow: hidden;
 }
 
+html{
+    overflow: auto;
+}
+
 .container {
     text-align: center;
     max-height: 100vh;

@@ -47,12 +47,10 @@ function createGrid() {
             cell.dataset.col = colIndex;
             cell.appendChild(span);
 
-            cell.addEventListener('mousedown', startSelection);
-            cell.addEventListener('mouseover', continueSelection);
-            cell.addEventListener('mouseup', endSelection);
-            cell.addEventListener('touchstart', startSelection, { passive: false });
-            cell.addEventListener('touchmove', continueSelection, { passive: false });
-            cell.addEventListener('touchend', endSelection, { passive: false });
+            cell.addEventListener('pointerdown', startSelection);
+            cell.addEventListener('pointermove', continueSelection);
+            cell.addEventListener('pointerup', endSelection);
+            cell.addEventListener('pointercancel', endSelection);
             wordGridElement.appendChild(cell);
         });
     });
@@ -65,16 +63,17 @@ function startSelection(event) {
     startCell = event.target.closest('div');
     selectCell(startCell);
     displaySelectedWord();
-    const clientX = event.touches ? event.touches[0].clientX : event.clientX;
-    const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+    const clientX = event.clientX;
+    const clientY = event.clientY;
     drawLineToCellCenter(startCell, clientX, clientY);
+    event.target.setPointerCapture(event.pointerId); // Cattura gli eventi di puntamento
 }
 
 function continueSelection(event) {
     event.preventDefault();
     if (isSelecting) {
-        const clientX = event.touches ? event.touches[0].clientX : event.clientX;
-        const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+        const clientX = event.clientX;
+        const clientY = event.clientY;
         const endCell = document.elementFromPoint(clientX, clientY).closest('div');
         if (endCell) {
             selectCellsInLine(startCell, endCell);
@@ -194,7 +193,7 @@ function drawLineToCellCenter(startCell, endX, endY) {
     const adjustedEndX = targetRect.left + targetRect.width / 2 - rect.left;
     const adjustedEndY = targetRect.top + targetRect.height / 2 - rect.top;
 
-    const circleDiameter = 30;
+    const circleDiameter = 40;
     const circleRadius = circleDiameter / 2;
 
     dynamicCtx.clearRect(0, 0, dynamicCanvas.width, dynamicCanvas.height);
@@ -203,7 +202,7 @@ function drawLineToCellCenter(startCell, endX, endY) {
     dynamicCtx.moveTo(startX, startY);
     dynamicCtx.lineTo(adjustedEndX, adjustedEndY);
     dynamicCtx.strokeStyle = 'rgb(200, 200, 200)';
-    dynamicCtx.lineWidth = 30;
+    dynamicCtx.lineWidth = 40;
     dynamicCtx.stroke();
 
     dynamicCtx.beginPath();
@@ -228,7 +227,7 @@ function drawFixedLineForSelection(color) {
     const endX = endCell.offsetLeft + endCell.offsetWidth / 2;
     const endY = endCell.offsetTop + endCell.offsetHeight / 2;
 
-    const circleDiameter = 34;
+    const circleDiameter = 40;
     const circleRadius = circleDiameter / 2;
 
     // Disegna la linea
@@ -236,7 +235,7 @@ function drawFixedLineForSelection(color) {
     fixedCtx.moveTo(startX, startY);
     fixedCtx.lineTo(endX, endY);
     fixedCtx.strokeStyle = color;
-    fixedCtx.lineWidth = 34;
+    fixedCtx.lineWidth = 40;
     fixedCtx.stroke();
 
     // Disegna il cerchio iniziale
