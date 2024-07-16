@@ -1,65 +1,249 @@
 {
-    "artists": [
+  "artists": [
       {
-        "nome": "MENGONI",
-        "data": "10 luglio 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/mengoni"
+          "id": "CRIMINE",
+          "nome": "Nome dell'artista 1",
+          "data": "Data evento 1",
+          "venue": "Luogo evento 1",
+          "button": "URL per acquistare biglietti 1"
       },
       {
-        "nome": "ANNALISA",
-        "data": "15 luglio 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/annalisa"
+          "id": "AMICO",
+          "nome": "Nome dell'artista 2",
+          "data": "Data evento 2",
+          "venue": "Luogo evento 2",
+          "button": "URL per acquistare biglietti 2"
       },
       {
-        "nome": "ULTIMO",
-        "data": "20 luglio 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/ultimo"
+          "id": "FUTBOL",
+          "nome": "Nome dell'artista 3",
+          "data": "Data evento 3",
+          "venue": "Luogo evento 3",
+          "button": "URL per acquistare biglietti 3"
       },
       {
-        "nome": "ELODIE",
-        "data": "25 luglio 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/elodie"
+          "id": "GIOVENTU",
+          "nome": "Nome dell'artista 4",
+          "data": "Data evento 4",
+          "venue": "Luogo evento 4",
+          "button": "URL per acquistare biglietti 4"
       },
       {
-        "nome": "FEDEZ",
-        "data": "30 luglio 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/fedez"
+          "id": "ROSA",
+          "nome": "Nome dell'artista 5",
+          "data": "Data evento 5",
+          "venue": "Luogo evento 5",
+          "button": "URL per acquistare biglietti 5"
       },
       {
-        "nome": "ACHILLELAURO",
-        "data": "05 agosto 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/achillelauro"
+          "id": "FIABA",
+          "nome": "Nome dell'artista 6",
+          "data": "Data evento 6",
+          "venue": "Luogo evento 6",
+          "button": "URL per acquistare biglietti 6"
       },
       {
-        "nome": "LEVANTE",
-        "data": "10 agosto 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/levante"
+          "id": "FREUD",
+          "nome": "Nome dell'artista 7",
+          "data": "Data evento 7",
+          "venue": "Luogo evento 7",
+          "button": "URL per acquistare biglietti 7"
       },
       {
-        "nome": "MADAME",
-        "data": "15 agosto 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/madame"
+          "id": "THEWALL",
+          "nome": "Nome dell'artista 8",
+          "data": "Data evento 8",
+          "venue": "Luogo evento 8",
+          "button": "URL per acquistare biglietti 8"
       },
       {
-        "nome": "IRAMA",
-        "data": "20 agosto 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/irama"
+          "id": "BODYSCEMI",
+          "nome": "Nome dell'artista 9",
+          "data": "Data evento 9",
+          "venue": "Luogo evento 9",
+          "button": "URL per acquistare biglietti 9"
       },
       {
-        "nome": "MAHMOOD",
-        "data": "25 agosto 2024",
-        "venue": "Teatro Colosseo, Torino",
-        "button": "https://example.com/mahmood"
+          "id": "NAPOLI",
+          "nome": "Nome dell'artista 10",
+          "data": "Data evento 10",
+          "venue": "Luogo evento 10",
+          "button": "URL per acquistare biglietti 10"
+      },
+      {
+          "id": "MISSITALIA",
+          "nome": "Nome dell'artista 11",
+          "data": "Data evento 11",
+          "venue": "Luogo evento 11",
+          "button": "URL per acquistare biglietti 11"
+      },
+      {
+          "id": "DANZA",
+          "nome": "Nome dell'artista 12",
+          "data": "Data evento 12",
+          "venue": "Luogo evento 12",
+          "button": "URL per acquistare biglietti 12"
+      },
+      {
+          "id": "PIUTTOSTOCHE",
+          "nome": "Nome dell'artista 13",
+          "data": "Data evento 13",
+          "venue": "Luogo evento 13",
+          "button": "URL per acquistare biglietti 13"
+      },
+      {
+          "id": "CANZONACCE",
+          "nome": "Nome dell'artista 14",
+          "data": "Data evento 14",
+          "venue": "Luogo evento 14",
+          "button": "URL per acquistare biglietti 14"
+      },
+      {
+          "id": "TUMTUMPA",
+          "nome": "Nome dell'artista 15",
+          "data": "Data evento 15",
+          "venue": "Luogo evento 15",
+          "button": "URL per acquistare biglietti 15"
+      },
+      {
+          "id": "OBLIO",
+          "nome": "Nome dell'artista 16",
+          "data": "Data evento 16",
+          "venue": "Luogo evento 16",
+          "button": "URL per acquistare biglietti 16"
+      },
+      {
+          "id": "MARGUTTA",
+          "nome": "Nome dell'artista 17",
+          "data": "Data evento 17",
+          "venue": "Luogo evento 17",
+          "button": "URL per acquistare biglietti 17"
+      },
+      {
+          "id": "EPIFANIO",
+          "nome": "Nome dell'artista 18",
+          "data": "Data evento 18",
+          "venue": "Luogo evento 18",
+          "button": "URL per acquistare biglietti 18"
+      },
+      {
+          "id": "NONELARAI",
+          "nome": "Nome dell'artista 19",
+          "data": "Data evento 19",
+          "venue": "Luogo evento 19",
+          "button": "URL per acquistare biglietti 19"
+      },
+      {
+          "id": "ILTRIO",
+          "nome": "Nome dell'artista 20",
+          "data": "Data evento 20",
+          "venue": "Luogo evento 20",
+          "button": "URL per acquistare biglietti 20"
+      },
+      {
+          "id": "AUTOMOBILISTA",
+          "nome": "Nome dell'artista 21",
+          "data": "Data evento 21",
+          "venue": "Luogo evento 21",
+          "button": "URL per acquistare biglietti 21"
+      },
+      {
+          "id": "DEMOCRATICO",
+          "nome": "Nome dell'artista 22",
+          "data": "Data evento 22",
+          "venue": "Luogo evento 22",
+          "button": "URL per acquistare biglietti 22"
+      },
+      {
+          "id": "CAUCASICO",
+          "nome": "Nome dell'artista 23",
+          "data": "Data evento 23",
+          "venue": "Luogo evento 23",
+          "button": "URL per acquistare biglietti 23"
+      },
+      {
+          "id": "VITABASSA",
+          "nome": "Nome dell'artista 24",
+          "data": "Data evento 24",
+          "venue": "Luogo evento 24",
+          "button": "URL per acquistare biglietti 24"
+      },
+      {
+          "id": "DARTAGNAN",
+          "nome": "Nome dell'artista 25",
+          "data": "Data evento 25",
+          "venue": "Luogo evento 25",
+          "button": "URL per acquistare biglietti 25"
+      },
+      {
+          "id": "NEVE",
+          "nome": "Nome dell'artista 26",
+          "data": "Data evento 26",
+          "venue": "Luogo evento 26",
+          "button": "URL per acquistare biglietti 26"
+      },
+      {
+          "id": "TATIANA",
+          "nome": "Nome dell'artista 27",
+          "data": "Data evento 27",
+          "venue": "Luogo evento 27",
+          "button": "URL per acquistare biglietti 27"
+      },
+      {
+          "id": "VIANDANTE",
+          "nome": "Nome dell'artista 28",
+          "data": "Data evento 28",
+          "venue": "Luogo evento 28",
+          "button": "URL per acquistare biglietti 28"
+      },
+      {
+          "id": "BELISARI",
+          "nome": "Nome dell'artista 29",
+          "data": "Data evento 29",
+          "venue": "Luogo evento 29",
+          "button": "URL per acquistare biglietti 29"
+      },
+      {
+          "id": "STREGA",
+          "nome": "Nome dell'artista 30",
+          "data": "Data evento 30",
+          "venue": "Luogo evento 30",
+          "button": "URL per acquistare biglietti 30"
+      },
+      {
+          "id": "FATTO",
+          "nome": "Nome dell'artista 31",
+          "data": "Data evento 31",
+          "venue": "Luogo evento 31",
+          "button": "URL per acquistare biglietti 31"
+      },
+      {
+          "id": "PIERFERDI",
+          "nome": "Nome dell'artista 32",
+          "data": "Data evento 32",
+          "venue": "Luogo evento 32",
+          "button": "URL per acquistare biglietti 32"
+      },
+      {
+          "id": "DOROTHY",
+          "nome": "Nome dell'artista 33",
+          "data": "Data evento 33",
+          "venue": "Luogo evento 33",
+          "button": "URL per acquistare biglietti 33"
+      },
+      {
+          "id": "PUB",
+          "nome": "Nome dell'artista 34",
+          "data": "Data evento 34",
+          "venue": "Luogo evento 34",
+          "button": "URL per acquistare biglietti 34"
+      },
+      {
+          "id": "BOOMERS",
+          "nome": "Nome dell'artista 35",
+          "data": "Data evento 35",
+          "venue": "Luogo evento 35",
+          "button": "URL per acquistare biglietti 35"
       }
-    ]
-  }
-  
+  ]
+}

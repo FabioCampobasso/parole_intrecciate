@@ -6,7 +6,8 @@ body {
   background-color: #f0f0f0;
   margin: 0;
   background-color: lightgray;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-bottom: 6rem;
 }
 
 
@@ -57,7 +58,7 @@ html {
 
 .grid div.correct span {
   color: rgb(0, 0, 0);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700; /* Roboto Bold */
   transform: rotateY(360deg);
 }
@@ -67,7 +68,7 @@ html {
   background-color: white;
   border-radius: 2rem;
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
 }
 
@@ -195,7 +196,7 @@ article {
   margin: 1rem;
   border-radius: 2rem;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
 }
 
@@ -210,6 +211,7 @@ h2 {
   position: absolute;
   background-color: yellow;
   color: black;
+  
   font-size: 0.75em;
   padding: 3px;
   margin-left: 1rem;
@@ -294,4 +296,30 @@ h2 {
   transition: background-color 0.3s;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+}
+
+.words-container {
+  background-color: #fff;
+  width: 80vw; /* Larghezza del contenitore */
+  max-height: 120px; /* Altezza massima del contenitore */
+  overflow-x: auto; /* Abilita lo scroll orizzontale */
+  white-space: nowrap; /* Impedisce la rottura di riga per far sì che tutte le parole siano sullo stesso rigo */
+  padding: 0.8rem;
+  border: 1px solid #ccc; /* Bordo per rendere visibile il contenitore */
+  margin: auto;
+  border: none;
+  outline: none;
+}
+
+.word-item {
+  display: inline; /* Visualizza gli elementi in linea */
+  gap: 1 rem; /* Margine tra le parole */
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.Parole_da_trovare{
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin: 1rem;
 }

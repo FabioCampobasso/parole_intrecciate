@@ -1,24 +1,80 @@
+//const grid = [
+//    ['E', 'P', 'I', 'F', 'A', 'N', 'I', 'O', 'A', 'D'],
+//    ['I', 'L', 'T', 'R', 'I', 'O', 'D', 'M', 'U', 'E'],
+//    ['X', 'P', 'U', 'B', 'O', 'N', 'O', 'A', 'T', 'M'],
+//    ['P', 'X', 'X', 'O', 'B', 'E', 'R', 'R', 'O', 'O'],
+//    ['I', 'E', 'X', 'O', 'L', 'L', 'O', 'G', 'M', 'C'],
+//    ['E', 'D', 'V', 'M', 'I', 'A', 'T', 'U', 'O', 'R'],
+//    ['R', 'F', 'A', 'E', 'O', 'R', 'H', 'T', 'B', 'A'],
+//    ['F', 'A', 'X', 'R', 'N', 'A', 'Y', 'T', 'I', 'T'],
+//    ['E', 'T', 'X', 'S', 'T', 'I', 'X', 'A', 'L', 'I'],
+//    ['R', 'T', 'A', 'T', 'I', 'A', 'N', 'A', 'I', 'C'],
+//    ['D', 'O', 'S', 'T', 'R', 'E', 'G', 'A', 'S', 'O'],
+//    ['I', 'V', 'I', 'A', 'N', 'D', 'A', 'N', 'T', 'E'],
+//    ['V', 'I', 'T', 'A', 'B', 'A', 'S', 'S', 'A', 'X'],
+//    ['C', 'A', 'U', 'C', 'A', 'S', 'I', 'C', 'O', 'N'],
+//    ['B', 'E', 'L', 'I', 'S', 'A', 'R', 'I', 'X', 'X']
+//];
+
 const words = [
-    "MENGONI", "ANNALISA", "ULTIMO", "ELODIE", "FEDEZ", "ACHILLELAURO", "LEVANTE", "MADAME", "IRAMA", "MAHMOOD"
+    "CRIMINE", "AMICO", "FUTBOL", "GIOVENTU", "ROSA", "FIABA", "FREUD", "THEWALL", "BODYSCEMI", 
+    "NAPOLI", "MISSITALIA", "DANZA", "PIUTTOSTOCHE", "CANZONACCE", "TUMTUMPA", "OBLIO", "MARGUTTA", 
+    "EPIFANIO", "NONELARAI", "ILTRIO", "AUTOMOBILISTA", "DEMOCRATICO", "CAUCASICO", "VITABASSA", 
+    "DARTAGNAN", "NEVE", "TATIANA", "VIANDANTE", "BELISARI", "STREGA", "FATTO", "PIERFERDI", 
+    "DOROTHY", "PUB", "BOOMERS"
 ];
 
+
 const grid = [
-    ['F', 'L', 'E', 'V', 'A', 'N', 'T', 'E', 'E', 'Q'],
-    ['M', 'E', 'A', 'R', 'S', 'V', 'S', 'R', 'W', 'S'],
-    ['V', 'E', 'D', 'T', 'O', 'C', 'J', 'D', 'M', 'N'],
-    ['G', 'I', 'N', 'E', 'M', 'H', 'T', 'A', 'A', 'K'],
-    ['Y', 'A', 'R', 'G', 'Z', 'U', 'E', 'C', 'N', 'L'],
-    ['J', 'F', 'P', 'A', 'O', 'V', 'D', 'H', 'N', 'M'],
-    ['C', 'R', 'W', 'V', 'M', 'N', 'Z', 'I', 'A', 'E'],
-    ['G', 'H', 'Q', 'I', 'W', 'A', 'I', 'L', 'L', 'L'],
-    ['M', 'M', 'A', 'D', 'A', 'M', 'E', 'L', 'I', 'O'],
-    ['A', 'Q', 'R', 'L', 'G', 'F', 'N', 'E', 'S', 'D'],
-    ['H', 'D', 'P', 'O', 'T', 'X', 'U', 'L', 'A', 'I'],
-    ['M', 'J', 'P', 'Z', 'I', 'E', 'B', 'A', 'D', 'E'],
-    ['O', 'U', 'L', 'T', 'I', 'M', 'O', 'U', 'W', 'P'],
-    ['O', 'W', 'M', 'P', 'Z', 'R', 'A', 'R', 'B', 'S'],
-    ['D', 'U', 'D', 'G', 'J', 'J', 'U', 'O', 'N', 'Y']
+    ['C', 'A', 'N', 'Z', 'O', 'N', 'A', 'C', 'C', 'E'],
+    ['G', 'I', 'O', 'V', 'E', 'N', 'T', 'U', 'X', 'X'],
+    ['X', 'X', 'X', 'X', 'X', 'X', 'H', 'X', 'X', 'P'],
+    ['X', 'F', 'X', 'X', 'F', 'R', 'E', 'U', 'D', 'I'],
+    ['X', 'X', 'I', 'X', 'X', 'X', 'W', 'X', 'X', 'U'],
+    ['X', 'N', 'D', 'A', 'N', 'Z', 'A', 'X', 'X', 'T'],
+    ['X', 'A', 'X', 'X', 'B', 'X', 'L', 'X', 'A', 'T'],
+    ['X', 'P', 'X', 'A', 'X', 'A', 'L', 'X', 'M', 'O'],
+    ['B', 'O', 'D', 'Y', 'S', 'C', 'E', 'M', 'I', 'S'],
+    ['X', 'L', 'X', 'X', 'X', 'O', 'X', 'X', 'C', 'T'],
+    ['X', 'I', 'X', 'X', 'X', 'X', 'R', 'X', 'O', 'O'],
+    ['T', 'U', 'M', 'T', 'U', 'M', 'P', 'A', 'X', 'C'],
+    ['X', 'X', 'F', 'U', 'T', 'B', 'O', 'L', 'X', 'H'],
+    ['X', 'X', 'X', 'C', 'R', 'I', 'M', 'I', 'N', 'E'],
+    ['M', 'I', 'S', 'S', 'I', 'T', 'A', 'L', 'I', 'A']
 ];
+
+function initializeCanvases() {
+    const wordGridElement = document.getElementById('word-grid');
+    const dynamicCanvas = document.getElementById('selection-canvas');
+    const fixedCanvas = document.getElementById('fixed-canvas');
+    const dynamicCtx = dynamicCanvas.getContext('2d');
+    const fixedCtx = fixedCanvas.getContext('2d');
+    
+    dynamicCanvas.width = wordGridElement.offsetWidth;
+    dynamicCanvas.height = wordGridElement.offsetHeight;
+    fixedCanvas.width = wordGridElement.offsetWidth;
+    fixedCanvas.height = wordGridElement.offsetHeight;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const wordsContainer = document.getElementById('wordsContainer');
+
+    words.forEach((word, index) => {
+        const words_estract = document.createElement('div');
+        words_estract.className = 'word-item';
+        words_estract.id = 'word-' + word;
+        words_estract.textContent = word;
+        
+        if (index < words.length - 1) {
+            words_estract.textContent += ' - ';
+        }
+        
+        wordsContainer.appendChild(words_estract);
+    });
+
+    createGrid(); 
+    updateWordCount();
+});
 
 export let selectedCells = [];
 let isSelecting = false;
@@ -56,6 +112,9 @@ function createGrid() {
             wordGridElement.appendChild(cell);
         });
     });
+    
+    // Inizializza i canvas dopo aver creato la griglia
+    initializeCanvases();
 }
 
 function startSelection(event) {
@@ -250,7 +309,6 @@ function drawFixedLineForSelection(color) {
     fixedCtx.fill();
 }
 
-createGrid();
 
 // MOSTRA LETTERE SELEZIONATE
 function displaySelectedWord() {
@@ -352,17 +410,23 @@ function checkWord() {
 
     if (correctWord && !guessedWords.includes(correctWord)) {
         guessedWords.push(correctWord);
-        const artist_name = correctWord;
+        const artist_id = correctWord; // Usa l'ID della parola come riferimento
 
-        const artist = artistData.find(a => a.nome === artist_name);
+        const artist = artistData.find(a => a.id === artist_id); // Trova l'artista per ID
         if (artist) {
-            showPopup(artist);
+            showPopup(artist); // Mostra il popup se l'artista è trovato
         }
 
         addWordToSideMenu();  
         updateWordCount();   
         addTransitionDelays();
         selectedCells.forEach(cell => cell.classList.add('correct'));
+
+        // Change the color of the guessed word in the list
+        const wordElement = document.getElementById('word-' + correctWord);
+        if (wordElement) {
+            wordElement.style.color = 'yellow';  // Change the color to yellow
+        }
 
         return true;
     }
