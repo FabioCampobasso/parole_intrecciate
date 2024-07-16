@@ -261,7 +261,7 @@ h2 {
   white-space: normal; /* Assicura che il wrapping avvenga naturalmente */
 }
 
-.artist-date { font-size: 1rem; margin: 1rem 0;}
+.artist-date { font-size: 1rem; margin: 0.8rem 0;}
 
 
 .artist-button, .close-button {

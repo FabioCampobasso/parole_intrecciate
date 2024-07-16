@@ -166,20 +166,22 @@ document.addEventListener('DOMContentLoaded', function() {
 function addWordToSideMenu() {
     const sideMenu = document.getElementById('sideMenu');
     sideMenu.innerHTML = '<h2>Parole Indovinate</h2>';  // Pulisce il contenuto precedente del sideMenu
-    const conteainerWordDiv = document.createElement('main');
-    sideMenu.appendChild(conteainerWordDiv);
+    const containerWordDiv = document.createElement('main');
+    sideMenu.appendChild(containerWordDiv);
     guessedWords.forEach(word => {
         const wordDiv = document.createElement('article');
         wordDiv.textContent = word;
+        // Assegna l'evento click che cerca l'artista tramite ID e non tramite nome
         wordDiv.addEventListener('click', () => {
-            const artist = artistData.find(a => a.nome === word);
+            const artist = artistData.find(a => a.id === word);
             if (artist) {
                 showPopup(artist);
             }
         });
-        conteainerWordDiv.appendChild(wordDiv);
+        containerWordDiv.appendChild(wordDiv);
     });
 }
+
 function addTransitionDelays() {
     selectedCells.forEach((cell, index) => {
         cell.querySelector('span').style.transitionDelay = `${index * 0.1}s`;
@@ -347,9 +349,17 @@ function showPopup(artist) {
     artistShow.classList.add('artist-show');
     artistShow.textContent = artist.spettacolo;
 
-    const artistDate = document.createElement('h5');
-    artistDate.classList.add('artist-date');
-    artistDate.textContent = artist.data;
+    // Creiamo un contenitore per le date
+    const artistDatesContainer = document.createElement('div');
+    artistDatesContainer.classList.add('artist-dates-container');
+
+    // Cicliamo su tutte le date e le aggiungiamo al contenitore
+    artist.date.forEach(date => {
+        const artistDate = document.createElement('h5');
+        artistDate.classList.add('artist-date');
+        artistDate.textContent = date;
+        artistDatesContainer.appendChild(artistDate);
+    });
 
     const artistButton = document.createElement('a');
     artistButton.classList.add('artist-button');
@@ -367,13 +377,14 @@ function showPopup(artist) {
 
     popup.appendChild(artistName);
     popup.appendChild(artistShow);
-    popup.appendChild(artistDate);
+    popup.appendChild(artistDatesContainer); // Aggiungi il contenitore delle date al popup
     popup.appendChild(artistButton);
     popup.appendChild(closeButton);
 
     document.body.appendChild(popup);
     setTimeout(() => popup.classList.add('show'), 10); // Trigger animation
 }
+
 
 // CONTROLLA SE LA PAROLA SELEZIONATA è CORRETTA
 function checkWord() {
