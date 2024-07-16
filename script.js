@@ -1,27 +1,6 @@
-//const grid = [
-//    ['E', 'P', 'I', 'F', 'A', 'N', 'I', 'O', 'A', 'D'],
-//    ['I', 'L', 'T', 'R', 'I', 'O', 'D', 'M', 'U', 'E'],
-//    ['X', 'P', 'U', 'B', 'O', 'N', 'O', 'A', 'T', 'M'],
-//    ['P', 'X', 'X', 'O', 'B', 'E', 'R', 'R', 'O', 'O'],
-//    ['I', 'E', 'X', 'O', 'L', 'L', 'O', 'G', 'M', 'C'],
-//    ['E', 'D', 'V', 'M', 'I', 'A', 'T', 'U', 'O', 'R'],
-//    ['R', 'F', 'A', 'E', 'O', 'R', 'H', 'T', 'B', 'A'],
-//    ['F', 'A', 'X', 'R', 'N', 'A', 'Y', 'T', 'I', 'T'],
-//    ['E', 'T', 'X', 'S', 'T', 'I', 'X', 'A', 'L', 'I'],
-//    ['R', 'T', 'A', 'T', 'I', 'A', 'N', 'A', 'I', 'C'],
-//    ['D', 'O', 'S', 'T', 'R', 'E', 'G', 'A', 'S', 'O'],
-//    ['I', 'V', 'I', 'A', 'N', 'D', 'A', 'N', 'T', 'E'],
-//    ['V', 'I', 'T', 'A', 'B', 'A', 'S', 'S', 'A', 'X'],
-//    ['C', 'A', 'U', 'C', 'A', 'S', 'I', 'C', 'O', 'N'],
-//    ['B', 'E', 'L', 'I', 'S', 'A', 'R', 'I', 'X', 'X']
-//];
-
 const words = [
     "CRIMINE", "AMICO", "FUTBOL", "GIOVENTU", "ROSA", "FIABA", "FREUD", "THEWALL", "BODYSCEMI", 
-    "NAPOLI", "MISSITALIA", "DANZA", "PIUTTOSTOCHE", "CANZONACCE", "TUMTUMPA", "OBLIO", "MARGUTTA", 
-    "EPIFANIO", "NONELARAI", "ILTRIO", "AUTOMOBILISTA", "DEMOCRATICO", "CAUCASICO", "VITABASSA", 
-    "DARTAGNAN", "NEVE", "TATIANA", "VIANDANTE", "BELISARI", "STREGA", "FATTO", "PIERFERDI", 
-    "DOROTHY", "PUB", "BOOMERS"
+    "NAPOLI", "MISSITALIA", "DANZA", "PIUTTOSTOCHE", "CANZONACCE", "TUMTUMPA"
 ];
 
 
@@ -364,13 +343,13 @@ function showPopup(artist) {
     artistName.classList.add('artist-name');
     artistName.textContent = artist.nome;
 
+    const artistShow = document.createElement('h2');
+    artistShow.classList.add('artist-show');
+    artistShow.textContent = artist.spettacolo;
+
     const artistDate = document.createElement('h5');
     artistDate.classList.add('artist-date');
     artistDate.textContent = artist.data;
-
-    const artistVenue = document.createElement('h2');
-    artistVenue.classList.add('artist-venue');
-    artistVenue.textContent = artist.venue;
 
     const artistButton = document.createElement('a');
     artistButton.classList.add('artist-button');
@@ -387,8 +366,8 @@ function showPopup(artist) {
     };
 
     popup.appendChild(artistName);
+    popup.appendChild(artistShow);
     popup.appendChild(artistDate);
-    popup.appendChild(artistVenue);
     popup.appendChild(artistButton);
     popup.appendChild(closeButton);
 
@@ -425,7 +404,7 @@ function checkWord() {
         // Change the color of the guessed word in the list
         const wordElement = document.getElementById('word-' + correctWord);
         if (wordElement) {
-            wordElement.style.color = 'yellow';  // Change the color to yellow
+            wordElement.style.color = 'lightgray';  // Change the color to yellow
         }
 
         return true;
@@ -433,3 +412,20 @@ function checkWord() {
     clearSelection();
     return false;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollBtn = document.getElementById('scrollButton');
+    const target = document.getElementById('word-grid').offsetTop;
+  
+    window.onscroll = function () {
+      // Cambia il simbolo della freccia e il comportamento del link in base alla posizione dello scroll
+      if (window.pageYOffset > target) {
+        scrollBtn.innerHTML = '&uarr;'; // Freccia verso l'alto
+        scrollBtn.href = '#'; // Imposta il link per tornare su
+      } else {
+        scrollBtn.innerHTML = '&darr;'; // Freccia verso il basso
+        scrollBtn.href = '#word-grid'; // Imposta il link per andare giù
+      }
+    };
+  });
+  

@@ -223,80 +223,72 @@ h2 {
 }
 
 .popup {
-  display: none;
   position: fixed;
   left: 50%;
-  margin-top: 350px;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 70%;  /* Larghezza al 80% della viewport */
+  max-width: 500px;  /* Larghezza massima di 500px */
   padding: 20px;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   opacity: 0;
   text-align: center;
   color: black;
+  background-color: yellow;
   border-radius: 2rem;
+  font-family: "Roboto", sans-serif;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  box-sizing: border-box;  /* Include padding nella larghezza totale */
 }
 
 .popup.show {
-  display: block;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
-  background-color: yellow;
 }
 
-.artist-name {
-  margin-block-end: 0.2rem;
-  margin-block-start: 0px;
-  font-size: 2em;
-  color: #000;
-  font-family: "Roboto", sans-serif;
+.artist-name, .artist-date, .artist-show {
+  margin: 0.2rem 0;
   font-weight: 700;
+  color:#000;
+  
 }
 
-.artist-date {
-  margin-block-end: 0.4rem;
-  margin-block-start: 0.2rem;
-  font-size: 1.5em;
-  color: #000;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
+.artist-name { font-size: 1.4rem; }
+.artist-show {
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  word-wrap: break-word; /* Consente di andare a capo all'interno del contenitore */
+  white-space: normal; /* Assicura che il wrapping avvenga naturalmente */
 }
 
-.artist-venue {
-  margin-block-end: 0.7rem;
-  margin-block-start: 0.2rem;;
-  font-size: 1em;
-  color: #000;
-  font-family: "Roboto", sans-serif;
+.artist-date { font-size: 1rem; margin: 1rem 0;}
+
+
+.artist-button, .close-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2rem;
   font-weight: 700;
+  transition: background-color 0.3s;
 }
 
 .artist-button {
   display: inline-block;
-  padding: 10px 20px;
   background-color: #000;
   color: yellow;
   text-decoration: none;
-  border-radius: 2rem;
-  transition: background-color 0.3s;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
 }
-
 
 .close-button {
   position: absolute;
   top: 0px;
   right: 0px;
-  padding: 15px 15px;
   background-color: transparent;
   color: black;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
 }
+
+
 
 .words-container {
   background-color: #fff;
@@ -304,12 +296,27 @@ h2 {
   max-height: 120px; /* Altezza massima del contenitore */
   overflow-x: auto; /* Abilita lo scroll orizzontale */
   white-space: nowrap; /* Impedisce la rottura di riga per far sì che tutte le parole siano sullo stesso rigo */
-  padding: 0.8rem;
-  border: 1px solid #ccc; /* Bordo per rendere visibile il contenitore */
+  padding: 4px 8px;
+  border: 10px solid #fff; /* Bordo per rendere visibile il contenitore */
   margin: auto;
-  border: none;
   outline: none;
+  border-radius: 3rem;
+
+  /* Nascondi la barra di scorrimento su Webkit */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Opzione alternativa per nascondere le scrollbar mantenendo lo scorrimento touch su altri browser */
+  scrollbar-width: none; /* Per Firefox */
+  -ms-overflow-style: none;  /* Per Internet Explorer 10+ */
 }
+
+/* Assicurati che il contenuto sia ancora scorrevole su IE e Edge legacy */
+.words-container {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 
 .word-item {
   display: inline; /* Visualizza gli elementi in linea */
@@ -322,4 +329,43 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin: 1rem;
+  display: inline-block;
 }
+
+#switch-year{
+  background-color: yellow;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  margin: 1rem;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+
+.scroll-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 10px; /* Aumentato da 10px a 50px per visibilità */
+  height: 10px; /* Aumentato da 10px a 50px per visibilità */
+  border-radius: 50%;
+  background-color: #000; /* Colore nero */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  line-height: 8px; /* Ajustato per centrare il testo verticalmente */
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2000; /* Aggiunto per garantire che il bottone appaia sopra gli altri elementi */
+}
+
+.scroll-btn:hover {
+  background-color: #000; /* Colore grigio scuro al passaggio del mouse */
+  transform: scale(1.1);
+}
+
