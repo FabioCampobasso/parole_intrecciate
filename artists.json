@@ -5,249 +5,249 @@
       "nome": "Roberta Bruzzone",
       "spettacolo": "Favole Da Incubo",
       "date": ["10/10/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 1"
+      "button": "https://example.com/tickets/1"
     },
     {
       "id": "AMICO",
       "nome": "Luca Bizzarri",
       "spettacolo": "Non Hanno Un Amico",
       "date": ["17/10/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 2"
+      "button": "https://example.com/tickets/2"
     },
     {
       "id": "FUTBOL",
       "nome": "Federico Buffa",
       "spettacolo": "La Milonga Del Futbol",
       "date": ["18/10/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 3"
+      "button": "https://example.com/tickets/3"
     },
     {
       "id": "GIOVENTU",
       "nome": "Giovanni Scifoni",
       "spettacolo": "FRA'",
       "date": ["24/10/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 4"
+      "button": "https://example.com/tickets/4"
     },
     {
       "id": "ROSA",
       "nome": "Michele Zarrillo",
       "spettacolo": "5 Giorni Da 30 Anni",
       "date": ["25/10/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 5"
+      "button": "https://example.com/tickets/5"
     },
     {
       "id": "FIABA",
       "nome": "Arianna Porcelli Safonov",
       "spettacolo": "Omeophonie",
       "date": ["26/10/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 6"
+      "button": "https://example.com/tickets/6"
     },
     {
       "id": "FREUD",
       "nome": "Beatrice Arnera",
       "spettacolo": "Pronto, Freud?",
       "date": ["30/10/2024 - 20:30", "31/10/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 7"
+      "button": "https://example.com/tickets/7"
     },
     {
       "id": "THEWALL",
       "nome": "Pink Floyd Legend Week",
       "spettacolo": "",
       "date": ["15/11/2024 - 20:30", "16/11/2024 - 20:30", "17/11/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 8"
+      "button": "https://example.com/tickets/8"
     },
     {
       "id": "BODYSCEMI",
       "nome": "Panpers",
       "spettacolo": "Bodyscemi",
       "date": ["19/11/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 9"
+      "button": "https://example.com/tickets/9"
     },
     {
       "id": "NAPOLI",
       "nome": "Peppe Barra",
       "spettacolo": "Un'Età Certa",
       "date": ["20/11/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 10"
+      "button": "https://example.com/tickets/10"
     },
     {
       "id": "MISSITALIA",
       "nome": "Katia Follesa e Valeria Graci",
       "spettacolo": "Ma Non Dovevamo Vederci Più?",
       "date": ["22/11/2024 - 20:30", "23/11/2024 - 18:00"],
-      "button": "URL per acquistare biglietti 11"
+      "button": "https://example.com/tickets/11"
     },
     {
       "id": "DANZA",
       "nome": "Parsons Dance",
       "spettacolo": "Balance For Power",
       "date": ["27/11/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 12"
+      "button": "https://example.com/tickets/12"
     },
     {
-      "id": "PIUTTOSTOCHE",
+      "id": "GRAZIE",
       "nome": "Pierluca Mariti",
       "spettacolo": "Grazie Per La Domanda",
       "date": ["02/12/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 13"
+      "button": "https://example.com/tickets/13"
     },
     {
       "id": "CANZONACCE",
       "nome": "Paolo Rossi",
       "spettacolo": "Da Questa Sera Si Recita A Soggetto!",
       "date": ["04/12/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 14"
+      "button": "https://example.com/tickets/14"
     },
     {
       "id": "TUMTUMPA",
       "nome": "Stomp",
       "spettacolo": "",
       "date": ["12/12/2024 - 20:30", "13/12/2024 - 20:30", "14/12/2024 - 15:30", "14/12/2024 - 20:30", "15/12/2024 - 15:30", "15/12/2024 - 20:30"],
-      "button": "URL per acquistare biglietti 15"
+      "button": "https://example.com/tickets/15"
     },
     {
       "id": "OBLIO",
       "nome": "Oblivion",
       "spettacolo": "Tuttorial",
       "date": ["05/01/2025 - 20:30", "06/01/2025 - 18:00"],
-      "button": "URL per acquistare biglietti 16"
+      "button": "https://example.com/tickets/16"
     },
     {
       "id": "MARGUTTA",
       "nome": "Luca Barbarossa",
       "spettacolo": "",
       "date": ["10/01/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 17"
+      "button": "https://example.com/tickets/17"
     },
     {
       "id": "EPIFANIO",
       "nome": "Antonio Albanese",
       "spettacolo": "Personaggi",
       "date": [
-        "15/01/2025 - 20:30", "16/01/2025 - 20:30", "17/01/2025 - 20:30", "18/01/2025 - 18:00",
-        "22/01/2025 - 20:30", "23/01/2025 - 20:30", "24/01/2025 - 20:30", "25/01/2025 - 18:00",
-        "29/01/2025 - 20:30", "30/01/2025 - 20:30", "31/01/2025 - 20:30", "01/02/2025 - 18:00"
+        "15-16-17/01/2025 - 20:30", "18/01/2025 - 18:00",
+        "22-23-24/01/2025 - 20:30", "25/01/2025 - 18:00",
+        "29-30-31/01/2025 - 20:30", "01/02/2025 - 18:00"
       ],
-      "button": "URL per acquistare biglietti 18"
+      "button": "https://example.com/tickets/18"
     },
     {
       "id": "NONELARAI",
       "nome": "Ambra Angiolini",
       "spettacolo": "Olivia Denaro",
       "date": ["11/02/2025 - 20:30", "12/02/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 19"
+      "button": "https://example.com/tickets/19"
     },
     {
       "id": "ILTRIO",
       "nome": "Massimo Lopez e Tullio Solenghi",
       "spettacolo": "Dove Eravamo Rimasti",
       "date": ["13/02/2025 - 20:30", "14/02/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 20"
+      "button": "https://example.com/tickets/20"
     },
     {
       "id": "AUTOMOBILISTA",
       "nome": "Gioele Dix",
       "spettacolo": "Ma Per Fortuna Che C'Era Il Gaber",
       "date": ["16/02/2025 - 18:00"],
-      "button": "URL per acquistare biglietti 21"
+      "button": "https://example.com/tickets/21"
     },
     {
       "id": "DEMOCRATICO",
       "nome": "Walter Veltroni",
       "spettacolo": "Le Emozioni Che Abbiamo Vissuto",
       "date": ["19/02/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 22"
+      "button": "https://example.com/tickets/22"
     },
     {
       "id": "CAUCASICO",
       "nome": "Antonio Ornano",
       "spettacolo": "Ornyfans",
       "date": ["22/02/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 23"
+      "button": "https://example.com/tickets/23"
     },
     {
       "id": "VITABASSA",
       "nome": "Giorgia Fumo",
       "spettacolo": "Vita Bassa",
       "date": ["26/02/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 24"
+      "button": "https://example.com/tickets/24"
     },
     {
       "id": "DARTAGNAN",
       "nome": "I Tre Moschettieri",
       "spettacolo": "Opera Pop",
       "date": ["28/02/2025 - 20:30", "01/03/2025 - 16:00", "02/03/2025 - 16:00"],
-      "button": "URL per acquistare biglietti 25"
+      "button": "https://example.com/tickets/25"
     },
     {
       "id": "NEVE",
       "nome": "Slava",
       "spettacolo": "Slava's Snowshow",
       "date": ["05/03/2025 - 20:30", "06/03/2025 - 20:30", "07/03/2025 - 20:30", "08/03/2025 - 16:00", "08/03/2025 - 20:30", "09/03/2025 - 16:00"],
-      "button": "URL per acquistare biglietti 26"
+      "button": "https://example.com/tickets/26"
     },
     {
       "id": "TATIANA",
       "nome": "Gabriele Cirilli",
       "spettacolo": "Cirilli & Family",
       "date": ["10/03/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 27"
+      "button": "https://example.com/tickets/27"
     },
     {
       "id": "VIANDANTE",
       "nome": "Umberto Galimberti",
       "spettacolo": "L'Io e il Noi. Il primato della relazione",
       "date": ["13/03/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 28"
+      "button": "https://example.com/tickets/28"
     },
     {
       "id": "BELISARI",
       "nome": "Elio",
       "spettacolo": "Quando un musicista ride",
       "date": ["14/03/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 29"
+      "button": "https://example.com/tickets/29"
     },
     {
       "id": "STREGA",
       "nome": "Geppi Cucciari",
       "spettacolo": "Perfetta",
       "date": ["16/03/2025 - 18:00"],
-      "button": "URL per acquistare biglietti 30"
+      "button": "https://example.com/tickets/30"
     },
     {
       "id": "FATTO",
       "nome": "Marco Travaglio",
       "spettacolo": "Nuovo Spettacolo",
       "date": ["20/03/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 31"
+      "button": "https://example.com/tickets/31"
     },
     {
       "id": "PIERFERDI",
       "nome": "Neri Marcorè",
       "spettacolo": "La buona novella",
       "date": ["25/03/2025 - 20:30", "26/03/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 32"
+      "button": "https://example.com/tickets/32"
     },
     {
       "id": "DOROTHY",
       "nome": "Tootsie",
       "spettacolo": "",
       "date": ["28/03/2025 - 20:30", "29/03/2025 - 20:30", "30/03/2025 - 16:00"],
-      "button": "URL per acquistare biglietti 33"
+      "button": "https://example.com/tickets/33"
     },
     {
       "id": "PUB",
       "nome": "The Choir Of Man",
       "spettacolo": "",
       "date": ["02/04/2025"],
-      "button": "URL per acquistare biglietti 34"
+      "button": "https://example.com/tickets/34"
     },
     {
       "id": "BOOMERS",
       "nome": "Marco Paolini",
-      "spettacolo": "Boomes",
+      "spettacolo": "Boomers",
       "date": ["15/04/2025 - 20:30"],
-      "button": "URL per acquistare biglietti 35"
+      "button": "https://example.com/tickets/35"
     }
   ]
 }
