@@ -12,7 +12,7 @@ main{
 }
 
 #scroll-container {
-  height: 100vh;
+  height: calc(100vh - 5rem);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -25,30 +25,40 @@ main{
   --os-padding-perpendicular: 2px;
   --os-padding-axis: 2px;
   --os-handle-bg: yellow;
-  --os-track-bg: black;
+  --os-track-bg: transparent;
   position: fixed;
-  z-index: 1000;
-  margin: -3px;
-  margin-left: 0; /* Assicurati che non ci sia margine */
+  z-index: 1000; 
+  --os-track-border-radius: 10px;
+  --os-handle-border-radius: 10px;
 }
 
 .os-scrollbar-vertical {
   width: var(--os-size);
   padding: var(--os-padding-perpendicular) var(--os-padding-axis);
+  height: 63%;
+  margin-right: 4px;
 }
 
 .os-scrollbar-track {
   background: var(--os-track-bg);
+  border-radius: var(--os-track-border-radius);
+  margin-top: 25px;
+  position: relative; /* Aggiunto per poter posizionare la handle in modo assoluto */
 }
 
 .os-scrollbar-handle {
   background: var(--os-handle-bg);
+  border-radius: var(--os-handle-border-radius);
+  position: absolute; /* Necessario per usare top */
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2); /* Ombra leggera */
 }
 
 .os-scrollbar-handle:hover,
 .os-scrollbar-handle:active {
-  background: var(--os-handle-bg); /* Mantenere lo stesso colore giallo */
+  background: var(--os-handle-bg); 
 }
+
+
 
 
 
@@ -352,7 +362,8 @@ h2 {
   width: 100vw;
   height: 3rem;
   padding: 2rem;
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
+
 }
 
 #header{
@@ -366,7 +377,6 @@ h2 {
   padding: 2rem;
   padding-top: 3rem;
   font-size: 1.5rem;
-  margin-bottom: 0.8rem;
 }
 
 

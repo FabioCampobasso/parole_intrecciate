@@ -451,6 +451,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Imposta la posizione di scorrimento all'inizio
-    osInstance.scroll({ y: "0%" }, 0);
+    osInstance.scroll({ y: "0%" }, 2);
 });
   
