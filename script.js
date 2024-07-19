@@ -435,7 +435,7 @@ window.addEventListener('resize', initializeCanvases);
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    OverlayScrollbars(document.querySelector("#scroll-container"), {
+    const osInstance = OverlayScrollbars(document.querySelector("#scroll-container"), {
       className: "os-theme-custom",
       scrollbars: {
         autoHide: "never",
@@ -449,4 +449,8 @@ document.addEventListener("DOMContentLoaded", function() {
         y: "scroll"
       }
     });
+  
+    // Imposta la posizione di scorrimento all'inizio
+    osInstance.scroll({ y: "0%" }, 0);
   });
+  
