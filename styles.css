@@ -1,7 +1,8 @@
 html,
 body {
   margin: 0;
-
+  background-color: lightgray;
+  padding: 0;
 }
 
 main{
@@ -10,29 +11,24 @@ main{
 }
 
 #scroll-container {
-  height: 100vh; /* o l'altezza desiderata */
+  height: 100vh;
   width: 100%;
-  overflow: hidden; /* OverlayScrollbars gestirà lo scrolling */
   display: flex;
   justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  margin: 0;
   background-color: lightgray;
   overflow: hidden;
-  padding-bottom: 6rem;
 }
 
 .os-scrollbar {
-  --os-size: 20px;
+  --os-size: 23px;
   --os-padding-perpendicular: 2px;
   --os-padding-axis: 2px;
-  /*--os-track-border-radius: 10px;*/
-  /*--os-handle-border-radius: 10px;*/
   --os-handle-bg: yellow;
-  --os-handle-bg-hover: #ffff66;
-  --os-handle-bg-active: #ffff99;
   --os-track-bg: #000000;
+  position: fixed;
+  z-index: 1000;
+  margin: -3px;
+  margin-left: 0px;  /* Assicurati che non ci sia margine */
 }
 
 .os-scrollbar-vertical {
@@ -57,6 +53,7 @@ main{
 .os-scrollbar-handle:active {
   background: var(--os-handle-bg-active);
 }
+
 
 .container {
   text-align: center;
@@ -166,29 +163,6 @@ main{
   margin: auto;
 }
 
-.show-selection-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%; 
-}
-
-#selected-word-display {
-  flex: 7; 
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-}
-
-/* Assicurati che i padding e margini dei singoli elementi non influenzino il layout complessivo */
-.selected-word-display {
-  height: 1rem;
-  text-align: center;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 2rem 0rem 0rem 2rem;
-  margin: 0;
-}
-
 
 main{
     overflow-y: scroll;
@@ -201,22 +175,28 @@ article {
   margin: 1rem;
   border-radius: 2rem;
   text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
 }
 
-.roboto-con-semibold{
+.roboto-con-regular,
+.roboto-con-semibold,
+.roboto-con-bold {
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.roboto-con-regular {
+  font-weight: 300;
+  font: 1.5rem;
+}
+.roboto-con-semibold {
   font-weight: 600;
 }
 
-.roboto-con-bold{
-  font-family: 'Roboto Condensed', sans-serif;
+.roboto-con-bold {
   font-weight: 900;
 }
 
-section{
-	display: flex;
+section {
+  display: flex;
 }
 
 h2 {
@@ -230,89 +210,85 @@ h2 {
   position: absolute;
   background-color: yellow;
   color: black;
-  
   font-size: 0.75em;
   padding: 3px;
   margin-left: 1rem;
-  border-radius: 2rem; /* Rende il badge circolare */
-  position: relative;
-  display: inline-block;
-  min-width: 20px; /* Assicura che il badge sia abbastanza grande */
+  border-radius: 2rem;
+  min-width: 20px;
   text-align: center;
 }
 
-.boot-button{
-    border-radius: 1rem;
-    margin-top: 10px;
-    padding:0.4rem 0.8rem;
-    background-color: black;
-    color: yellow;
-    border: none;
-    outline: none;
+.boot-button {
+  border-radius: 1rem;
+  margin-top: 10px;
+  padding: 0.4rem 0.8rem;
+  background-color: black;
+  color: yellow;
+  border: none;
 }
 
 .boot-button:hover,
 .boot-button:active,
 .boot-button:focus {
-  border-radius: 1rem;
-  margin-top: 10px;
-  padding:0.4rem 0.8rem;
   background-color: black;
   color: yellow;
   border: none;
-  outline: none;
 }
-
 
 #card-display-area {
   width: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  background-color: #f1f1f1; /* Colore di sfondo leggero per differenziare l'area */
-  margin-top: 20px;
+  background-color: #f1f1f1;
+  margin-top: 3rem;
 }
 
-.bg-yellow{
+.bg-yellow {
   background-color: yellow;
 }
 
 .popup {
   position: fixed;
-  top: 50%;  /* Posiziona il top del popup al 50% del viewport */
-  left: 50%; /* Posiziona il left del popup al 50% del viewport */
-  transform: translate(-50%, -50%); /* Sposta il popup indietro di metà della sua larghezza e altezza */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1000;
   border-radius: 1.5rem;
-  background: white;  /* Assicurati che il background sia visibile */
-  padding: 10px; /* Spazio all'interno del popup */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* Aggiunge un'ombra per un effetto elevato */
-  width: 90%; /* Larghezza massima per garantire la responsività su piccoli dispositivi */
-  max-width: 600px; /* Larghezza massima per dispositivi più grandi */
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
 }
 
-
-.artist-name, .artist-date, .artist-show {
+.artist-name,
+.artist-date,
+.artist-show {
   margin: 0.2rem 0;
   font-weight: 700;
-  color:#000;
-  
+  color: #000;
 }
 
-.artist-name { font-size: 1.4rem; }
+.artist-name {
+  font-size: 1.4rem;
+}
+
 .artist-show {
   font-size: 1rem;
   margin-bottom: 0.7rem;
-  word-wrap: break-word; /* Consente di andare a capo all'interno del contenitore */
-  white-space: normal; /* Assicura che il wrapping avvenga naturalmente */
+  word-wrap: break-word;
+  white-space: normal;
 }
 
-.artist-date { font-size: 1rem; margin: 0.8rem 0;}
+.artist-date {
+  font-size: 1rem;
+  margin: 0.8rem 0;
+}
 
-
-.artist-button, .close-button {
+.artist-button,
+.close-button {
   padding: 10px 20px;
   border: none;
   border-radius: 2rem;
@@ -321,7 +297,6 @@ h2 {
 }
 
 .artist-button {
-  display: inline-block;
   background-color: #000;
   color: yellow;
   text-decoration: none;
@@ -329,51 +304,41 @@ h2 {
 
 .close-button {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   background-color: transparent;
   color: black;
   cursor: pointer;
 }
 
-
-
 .words-container {
   background-color: #fff;
-  width: 77%; /* Larghezza del contenitore */
-  max-height: 120px; /* Altezza massima del contenitore */
-  overflow-x: auto; /* Abilita lo scroll orizzontale */
-  white-space: nowrap; /* Impedisce la rottura di riga per far sì che tutte le parole siano sullo stesso rigo */
+  width: 77%;
+  max-height: 120px;
+  overflow-x: auto;
+  white-space: nowrap;
   padding: 4px 8px;
-  border: 10px solid #fff; /* Bordo per rendere visibile il contenitore */
+  border: 10px solid #fff;
   margin: auto;
   margin-top: 2rem;
-  outline: none;
   border-radius: 3rem;
-
-/* Nascondi la barra di scorrimento su Webkit */
-&::-webkit-scrollbar {
-  display: none;
-}
-
-/* Opzione alternativa per nascondere le scrollbar mantenendo lo scorrimento touch su altri browser */
-scrollbar-width: none; /* Per Firefox */
--ms-overflow-style: none;  /* Per Internet Explorer 10+ */
-
-/* Assicurati che il contenuto sia ancora scorrevole su IE e Edge legacy */
-.words-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+.words-container::-webkit-scrollbar {
+  display: none;
+}
 
 .word-item {
-  display: inline; /* Visualizza gli elementi in linea */
-  gap: 1 rem; /* Margine tra le parole */
+  display: inline;
+  gap: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
-.Parole_da_trovare{
+.Parole_da_trovare {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   margin: 1rem;
@@ -381,25 +346,29 @@ scrollbar-width: none; /* Per Firefox */
 }
 
 
-#switch-year{
+#footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  width: 100vw;
+  height: 3rem;
+  padding: 2rem;
+  padding-bottom: 6rem;
+}
+
+#header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: yellow;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9rem;
-  margin: 1rem;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  color: #000;
-  display: inline-block;
+  color: black;
+  width: 100vw;
+  height: 3rem;
+  padding: 2rem;
+  padding-top: 3rem;
+  font-size: 1.5rem;
 }
 
 
-.side-menu,
-.show-selection-menu,
-.selected-word-display,
-#menuButton,
-.word-count-badge {
-    display: none;
-}
