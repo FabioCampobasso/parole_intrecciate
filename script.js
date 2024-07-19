@@ -386,8 +386,8 @@ function showCard(artist) {
     artistShow.textContent = artist.spettacolo;
     artistShow.style.color = '#000000';  // Alternanza di colori di testo
 
-    const artistDatesContainer = document.createElement('p');
-    artistDatesContainer.classList.add('roboto-con-semibold');
+    const artistDatesContainer = document.createElement('div');
+    artistDatesContainer.classList.add('roboto-con-semibold', 'date-container');
     artist.date.forEach(date => {
         const artistDate = document.createElement('p');
         artistDate.textContent = date;

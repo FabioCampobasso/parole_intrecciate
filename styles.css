@@ -211,10 +211,15 @@ h4, h5{
  margin:2px;
 }
 
+.date-container{
+  margin-bottom: 7px;
+  margin-top: 7px;
+
+}
+
 p{
   margin-left: 1px;
   margin-bottom: 0px;
-  margin-top: 7px;
 }
 
 .word-count-badge {
