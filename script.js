@@ -436,21 +436,21 @@ window.addEventListener('resize', initializeCanvases);
 
 document.addEventListener("DOMContentLoaded", function() {
     const osInstance = OverlayScrollbars(document.querySelector("#scroll-container"), {
-      className: "os-theme-custom",
-      scrollbars: {
-        autoHide: "never",
-        dragScrolling: true,
-        clickScrolling: true,
-        touchSupport: true,
-        snapHandle: true
-      },
-      overflowBehavior: {
-        x: "hidden",
-        y: "scroll"
-      }
+        className: "os-theme-custom",
+        scrollbars: {
+            autoHide: "never",
+            dragScrolling: true,
+            clickScrolling: true,
+            touchSupport: true,
+            snapHandle: true
+        },
+        overflowBehavior: {
+            x: "hidden",
+            y: "scroll"
+        }
     });
-  
+
     // Imposta la posizione di scorrimento all'inizio
     osInstance.scroll({ y: "0%" }, 0);
-  });
+});
   

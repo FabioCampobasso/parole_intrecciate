@@ -25,11 +25,11 @@ main{
   --os-padding-perpendicular: 2px;
   --os-padding-axis: 2px;
   --os-handle-bg: yellow;
-  --os-track-bg: rgb(232, 232, 0);
+  --os-track-bg: black;
   position: fixed;
   z-index: 1000;
   margin: -3px;
-  margin-left: 0px;  /* Assicurati che non ci sia margine */
+  margin-left: 0; /* Assicurati che non ci sia margine */
 }
 
 .os-scrollbar-vertical {
@@ -39,21 +39,17 @@ main{
 
 .os-scrollbar-track {
   background: var(--os-track-bg);
-  border-radius: var(--os-track-border-radius);
 }
 
 .os-scrollbar-handle {
   background: var(--os-handle-bg);
-  border-radius: var(--os-handle-border-radius);
 }
 
-.os-scrollbar-handle:hover {
-  background: var(--os-handle-bg-hover);
-}
-
+.os-scrollbar-handle:hover,
 .os-scrollbar-handle:active {
-  background: var(--os-handle-bg-active);
+  background: var(--os-handle-bg); /* Mantenere lo stesso colore giallo */
 }
+
 
 
 .container {
