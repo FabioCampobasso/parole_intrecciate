@@ -141,12 +141,6 @@ main{
   margin: 0;
 }
 
-.bg-card{
-  background-image: url(card.png);
-  background-size: cover;
-  overflow: hidden;
-}
-
 #word-grid div span {
   transition: color 0.3s ease, transform 0.6s ease;
 }

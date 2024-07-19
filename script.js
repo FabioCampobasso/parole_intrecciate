@@ -367,13 +367,13 @@ function showCard(artist) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.style.width = '100%';  // Larghezza della card adattata
-    card.style.padding = '10px';
+    card.style.paddingLeft = '5px';
     card.style.backgroundColor = isYellow ? '#FFFF00' : 'lightgray';  // Alternanza di colori di sfondo
 
     const cardBody = document.createElement('div');
     cardBody.classList.add('card-body');
 
-    const artistName = document.createElement('h3');
+    const artistName = document.createElement('h4');
     artistName.classList.add('card-title', 'roboto-con-bold');
     artistName.textContent = artist.nome;
     artistName.style.color = '#000000';  // Alternanza di colori di testo
