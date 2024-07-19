@@ -6,6 +6,7 @@ const words = [
     "DOROTHY", "PUB", "BOOMERS"
 ];
 
+
 const grid = [
     ['G', 'X', 'T', 'N', 'A', 'P', 'O', 'L', 'I', 'X'],
     ['B', 'I', 'X', 'H', 'A', 'F', 'R', 'E', 'U', 'D'],
@@ -35,6 +36,8 @@ const grid = [
     ['C', 'A', 'U', 'C', 'A', 'S', 'I', 'C', 'O', 'N'],
     ['X', 'X', 'X', 'D', 'A', 'N', 'Z', 'A', 'X', 'X']
 ];
+
+
 
 let selectedCells = [];
 let isSelecting = false;
@@ -371,22 +374,22 @@ function showCard(artist) {
     card.style.backgroundColor = isYellow ? '#FFFF00' : 'lightgray';  // Alternanza di colori di sfondo
 
     const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
+    cardBody.classList.add('card-body','pt-3','pb-3');
 
     const artistName = document.createElement('h4');
-    artistName.classList.add('card-title', 'roboto-con-bold');
+    artistName.classList.add( 'roboto-con-bold');
     artistName.textContent = artist.nome;
     artistName.style.color = '#000000';  // Alternanza di colori di testo
 
     const artistShow = document.createElement('h5');
-    artistShow.classList.add('card-text', 'roboto-con-semibold');
+    artistShow.classList.add( 'roboto-con-semibold');
     artistShow.textContent = artist.spettacolo;
     artistShow.style.color = '#000000';  // Alternanza di colori di testo
 
-    const artistDatesContainer = document.createElement('div');
-    artistDatesContainer.classList.add('card-text', 'roboto-con-semibold');
+    const artistDatesContainer = document.createElement('p');
+    artistDatesContainer.classList.add('roboto-con-semibold');
     artist.date.forEach(date => {
-        const artistDate = document.createElement('div');
+        const artistDate = document.createElement('p');
         artistDate.textContent = date;
         artistDate.style.color ='#000000';  // Alternanza di colori di testo
         artistDatesContainer.appendChild(artistDate);

@@ -207,6 +207,16 @@ h2 {
   white-space: nowrap;
 }
 
+h4, h5{
+ margin:2px;
+}
+
+p{
+  margin-left: 1px;
+  margin-bottom: 0px;
+  margin-top: 7px;
+}
+
 .word-count-badge {
   position: absolute;
   background-color: yellow;
@@ -221,7 +231,7 @@ h2 {
 
 .boot-button {
   border-radius: 1rem;
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 0.4rem 0.8rem;
   background-color: black;
   color: yellow;
@@ -245,6 +255,10 @@ h2 {
   background-color: #f1f1f1;
   margin-top: 3rem;
 }
+
+
+
+
 
 .bg-yellow {
   background-color: yellow;
