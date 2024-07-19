@@ -9,31 +9,31 @@ const words = [
 const grid = [
     ['G', 'X', 'T', 'N', 'A', 'P', 'O', 'L', 'I', 'X'],
     ['B', 'I', 'X', 'H', 'A', 'F', 'R', 'E', 'U', 'D'],
-    ['O', 'X', 'O', 'C', 'E', 'M', 'X', 'X', 'U', 'G'],
-    ['D', 'T', 'X', 'V', 'R', 'W', 'I', 'X', 'X', 'R'],
-    ['Y', 'U', 'F', 'X', 'E', 'I', 'A', 'C', 'X', 'A'],
-    ['S', 'M', 'D', 'U', 'R', 'N', 'M', 'L', 'O', 'Z'],
-    ['C', 'T', 'X', 'A', 'T', 'O', 'T', 'I', 'L', 'I'],
-    ['E', 'U', 'X', 'X', 'N', 'B', 'S', 'U', 'N', 'E'],
-    ['M', 'M', 'X', 'X', 'X', 'Z', 'O', 'A', 'X', 'E'],
-    ['I', 'P', 'F', 'I', 'A', 'B', 'A', 'L', 'X', 'X'],
+    ['O', 'B', 'O', 'C', 'E', 'M', 'X', 'X', 'U', 'G'],
+    ['D', 'T', 'E', 'V', 'R', 'W', 'I', 'X', 'X', 'R'],
+    ['Y', 'U', 'X', 'L', 'E', 'I', 'A', 'C', 'X', 'A'],
+    ['S', 'M', 'X', 'X', 'I', 'N', 'M', 'L', 'O', 'Z'],
+    ['C', 'T', 'X', 'X', 'E', 'S', 'T', 'I', 'L', 'I'],
+    ['E', 'U', 'A', 'V', 'X', 'X', 'A', 'U', 'N', 'E'],
+    ['M', 'M', 'E', 'X', 'X', 'X', 'X', 'R', 'X', 'E'],
+    ['I', 'P', 'F', 'U', 'T', 'B', 'O', 'L', 'I', 'X'],
     ['C', 'A', 'N', 'Z', 'O', 'N', 'A', 'C', 'C', 'E'],
     ['M', 'I', 'S', 'S', 'I', 'T', 'A', 'L', 'I', 'A'],
     ['E', 'P', 'I', 'F', 'A', 'N', 'I', 'O', 'A', 'D'],
     ['I', 'L', 'T', 'R', 'I', 'O', 'D', 'M', 'U', 'E'],
-    ['X', 'P', 'U', 'B', 'O', 'N', 'O', 'A', 'T', 'M'],
-    ['P', 'X', 'X', 'O', 'B', 'E', 'R', 'R', 'O', 'O'],
-    ['I', 'E', 'X', 'O', 'L', 'L', 'O', 'G', 'M', 'C'],
-    ['E', 'D', 'V', 'M', 'I', 'A', 'T', 'U', 'O', 'R'],
-    ['R', 'F', 'A', 'E', 'O', 'R', 'H', 'T', 'B', 'A'],
-    ['F', 'A', 'X', 'R', 'N', 'A', 'Y', 'T', 'I', 'T'],
-    ['E', 'T', 'X', 'S', 'T', 'I', 'X', 'A', 'L', 'I'],
+    ['X', 'P', 'U', 'B', 'X', 'N', 'O', 'A', 'T', 'M'],
+    ['P', 'X', 'X', 'O', 'O', 'E', 'R', 'R', 'O', 'O'],
+    ['I', 'X', 'F', 'O', 'B', 'L', 'O', 'G', 'M', 'C'],
+    ['E', 'D', 'I', 'M', 'L', 'A', 'T', 'U', 'O', 'R'],
+    ['R', 'F', 'A', 'E', 'I', 'R', 'H', 'T', 'B', 'A'],
+    ['F', 'A', 'B', 'R', 'O', 'A', 'Y', 'T', 'I', 'T'],
+    ['E', 'T', 'A', 'S', 'T', 'I', 'X', 'A', 'L', 'I'],
     ['R', 'T', 'A', 'T', 'I', 'A', 'N', 'A', 'I', 'C'],
     ['D', 'O', 'S', 'T', 'R', 'E', 'G', 'A', 'S', 'O'],
     ['I', 'V', 'I', 'A', 'N', 'D', 'A', 'N', 'T', 'E'],
     ['V', 'I', 'T', 'A', 'B', 'A', 'S', 'S', 'A', 'X'],
     ['C', 'A', 'U', 'C', 'A', 'S', 'I', 'C', 'O', 'N'],
-    ['B', 'E', 'L', 'I', 'S', 'A', 'R', 'I', 'X', 'X']
+    ['X', 'X', 'X', 'D', 'A', 'N', 'Z', 'A', 'X', 'X']
 ];
 
 let selectedCells = [];
@@ -432,3 +432,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('resize', initializeCanvases);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    OverlayScrollbars(document.querySelector("#scroll-container"), {
+      className: "os-theme-custom",
+      scrollbars: {
+        autoHide: "never",
+        dragScrolling: true,
+        clickScrolling: true,
+        touchSupport: true,
+        snapHandle: true
+      },
+      overflowBehavior: {
+        x: "hidden",
+        y: "scroll"
+      }
+    });
+  });

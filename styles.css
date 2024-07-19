@@ -1,5 +1,18 @@
 html,
 body {
+  margin: 0;
+
+}
+
+main{
+  display: inline;
+  width: 100%;
+}
+
+#scroll-container {
+  height: 100vh; /* o l'altezza desiderata */
+  width: 100%;
+  overflow: hidden; /* OverlayScrollbars gestirà lo scrolling */
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -10,31 +23,39 @@ body {
   padding-bottom: 6rem;
 }
 
-main{
-  display: inline;
-  width: 100%;
+.os-scrollbar {
+  --os-size: 20px;
+  --os-padding-perpendicular: 2px;
+  --os-padding-axis: 2px;
+  /*--os-track-border-radius: 10px;*/
+  /*--os-handle-border-radius: 10px;*/
+  --os-handle-bg: yellow;
+  --os-handle-bg-hover: #ffff66;
+  --os-handle-bg-active: #ffff99;
+  --os-track-bg: #000000;
 }
 
-#scroll-container {
-  height: 100vh;
-  width: 100vw;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  position: relative;
+.os-scrollbar-vertical {
+  width: var(--os-size);
+  padding: var(--os-padding-perpendicular) var(--os-padding-axis);
 }
 
-/* Stile per la scrollbar sempre visibile */
-#scroll-container::-webkit-scrollbar {
-  width: 20px;
+.os-scrollbar-track {
+  background: var(--os-track-bg);
+  border-radius: var(--os-track-border-radius);
 }
 
-#scroll-container::-webkit-scrollbar-track {
-  background: #000;
+.os-scrollbar-handle {
+  background: var(--os-handle-bg);
+  border-radius: var(--os-handle-border-radius);
 }
 
-#scroll-container::-webkit-scrollbar-thumb {
-  background: yellow;
+.os-scrollbar-handle:hover {
+  background: var(--os-handle-bg-hover);
+}
+
+.os-scrollbar-handle:active {
+  background: var(--os-handle-bg-active);
 }
 
 .container {
@@ -261,7 +282,7 @@ h2 {
 .popup {
   position: fixed;
   top: 50%;  /* Posiziona il top del popup al 50% del viewport */
-  left: 47%; /* Posiziona il left del popup al 50% del viewport */
+  left: 50%; /* Posiziona il left del popup al 50% del viewport */
   transform: translate(-50%, -50%); /* Sposta il popup indietro di metà della sua larghezza e altezza */
   z-index: 1000;
   border-radius: 1.5rem;
@@ -330,15 +351,14 @@ h2 {
   outline: none;
   border-radius: 3rem;
 
-  /* Nascondi la barra di scorrimento su Webkit */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Opzione alternativa per nascondere le scrollbar mantenendo lo scorrimento touch su altri browser */
-  scrollbar-width: none; /* Per Firefox */
-  -ms-overflow-style: none;  /* Per Internet Explorer 10+ */
+/* Nascondi la barra di scorrimento su Webkit */
+&::-webkit-scrollbar {
+  display: none;
 }
+
+/* Opzione alternativa per nascondere le scrollbar mantenendo lo scorrimento touch su altri browser */
+scrollbar-width: none; /* Per Firefox */
+-ms-overflow-style: none;  /* Per Internet Explorer 10+ */
 
 /* Assicurati che il contenuto sia ancora scorrevole su IE e Edge legacy */
 .words-container {
@@ -360,6 +380,7 @@ h2 {
   display: inline-block;
 }
 
+
 #switch-year{
   background-color: yellow;
   padding: 0.2rem 0.5rem;
@@ -374,28 +395,6 @@ h2 {
   display: inline-block;
 }
 
-.scroll-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 10px; /* Aumentato da 10px a 50px per visibilità */
-  height: 10px; /* Aumentato da 10px a 50px per visibilità */
-  border-radius: 50%;
-  background-color: #000; /* Colore nero */
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  line-height: 8px; /* Ajustato per centrare il testo verticalmente */
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out;
-  z-index: 2000; /* Aggiunto per garantire che il bottone appaia sopra gli altri elementi */
-}
-
-.scroll-btn:hover {
-  background-color: #000; /* Colore grigio scuro al passaggio del mouse */
-  transform: scale(1.1);
-}
 
 .side-menu,
 .show-selection-menu,
