@@ -1,253 +1,267 @@
 {
   "artists": [
-    {
-      "id": "CRIMINE",
-      "nome": "Roberta Bruzzone",
+  {
+      "id": "CRIME",
+      "nome": "Roberto Bruzzone",
       "spettacolo": "Favole Da Incubo",
-      "date": ["10/10/2024 - 20:30"],
-      "button": "https://example.com/tickets/1"
-    },
-    {
+      "date": ["10/10/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "AMICO",
       "nome": "Luca Bizzarri",
       "spettacolo": "Non Hanno Un Amico",
-      "date": ["17/10/2024 - 20:30"],
-      "button": "https://example.com/tickets/2"
-    },
-    {
+      "date": ["17/10/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "FUTBOL",
       "nome": "Federico Buffa",
       "spettacolo": "La Milonga Del Futbol",
-      "date": ["18/10/2024 - 20:30"],
-      "button": "https://example.com/tickets/3"
-    },
-    {
-      "id": "GIOVENTU",
+      "date": ["18/10/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
+      "id": "FRA",
       "nome": "Giovanni Scifoni",
       "spettacolo": "FRA'",
-      "date": ["24/10/2024 - 20:30"],
-      "button": "https://example.com/tickets/4"
-    },
-    {
+      "date": ["24/10/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "ROSA",
       "nome": "Michele Zarrillo",
-      "spettacolo": "5 Giorni Da 30 Anni",
-      "date": ["25/10/2024 - 20:30"],
-      "button": "https://example.com/tickets/5"
-    },
-    {
+      "spettacolo": "5 Giorni 30 Anni",
+      "date": ["25/10/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "FIABA",
-      "nome": "Arianna Porcelli Safonov",
-      "spettacolo": "Omeophonie",
-      "date": ["26/10/2024 - 20:30"],
-      "button": "https://example.com/tickets/6"
-    },
-    {
+      "nome": "Iaia Forte",
+      "spettacolo": "Omoephonie",
+      "date": ["26/10/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "FREUD",
       "nome": "Beatrice Arnera",
       "spettacolo": "Pronto, Freud?",
-      "date": ["30/10/2024 - 20:30", "31/10/2024 - 20:30"],
-      "button": "https://example.com/tickets/7"
-    },
-    {
-      "id": "THEWALL",
-      "nome": "Pink Floyd Legend Week",
-      "spettacolo": "",
-      "date": ["15/11/2024 - 20:30", "16/11/2024 - 20:30", "17/11/2024 - 20:30"],
-      "button": "https://example.com/tickets/8"
-    },
-    {
+      "date": ["30/10/2024 20:30", "31/10/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
+      "id": "WALL",
+      "nome": "Pincopallo",
+      "spettacolo": "Pink Floyd Legend Week",
+      "date": ["15-16-17/11/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "BODYSCEMI",
-      "nome": "Panpers",
+      "nome": "Pampers",
       "spettacolo": "Bodyscemi",
-      "date": ["19/11/2024 - 20:30"],
-      "button": "https://example.com/tickets/9"
-    },
-    {
+      "date": ["16/11/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "NAPOLI",
-      "nome": "Peppe Barra",
+      "nome": "Peppa Barra",
       "spettacolo": "Un'Età Certa",
-      "date": ["20/11/2024 - 20:30"],
-      "button": "https://example.com/tickets/10"
-    },
-    {
+      "date": ["20/11/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "MISSITALIA",
       "nome": "Katia Follesa e Valeria Graci",
       "spettacolo": "Ma Non Dovevamo Vederci Più?",
-      "date": ["22/11/2024 - 20:30", "23/11/2024 - 18:00"],
-      "button": "https://example.com/tickets/11"
-    },
-    {
+      "date": ["21/11/2024 20:30", "23/11/2024 18:00"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "DANZA",
-      "nome": "Parsons Dance",
+      "nome": "Pippo Danza",
       "spettacolo": "Balance For Power",
-      "date": ["27/11/2024 - 20:30"],
-      "button": "https://example.com/tickets/12"
-    },
-    {
+      "date": ["22/11/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "GRAZIE",
-      "nome": "Pierluca Mariti",
+      "nome": "Pierluca Marti",
       "spettacolo": "Grazie Per La Domanda",
-      "date": ["02/12/2024 - 20:30"],
-      "button": "https://example.com/tickets/13"
-    },
-    {
-      "id": "CANZONACCE",
+      "date": ["02/12/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
+      "id": "MILANO",
       "nome": "Paolo Rossi",
       "spettacolo": "Da Questa Sera Si Recita A Soggetto!",
-      "date": ["04/12/2024 - 20:30"],
-      "button": "https://example.com/tickets/14"
-    },
-    {
-      "id": "TUMTUMPA",
-      "nome": "Stomp",
-      "spettacolo": "",
-      "date": ["12/12/2024 - 20:30", "13/12/2024 - 20:30", "14/12/2024 - 15:30", "14/12/2024 - 20:30", "15/12/2024 - 15:30", "15/12/2024 - 20:30"],
-      "button": "https://example.com/tickets/15"
-    },
-    {
+      "date": ["04/12/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
+      "id": "BATTITO",
+      "nome": "Neri Per Caso",
+      "spettacolo": "Stomp",
+      "date": ["12/12/2024 20:30", "14/12/2024 20:30", "15/12/2024 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
       "id": "OBLIO",
       "nome": "Oblivion",
-      "spettacolo": "Tuttorial",
-      "date": ["05/01/2025 - 20:30", "06/01/2025 - 18:00"],
-      "button": "https://example.com/tickets/16"
-    },
-    {
-      "id": "MARGUTTA",
-      "nome": "Luca Barbarossa",
-      "spettacolo": "",
-      "date": ["10/01/2025 - 20:30"],
-      "button": "https://example.com/tickets/17"
-    },
-    {
-      "id": "EPIFANIO",
+      "spettacolo": "Tutorial",
+      "date": ["05/01/2025 20:30", "06/01/2025 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
+      "id": "RADIO",
+      "nome": "Luca Barbaresca",
+      "spettacolo": "Personaggi",
+      "date": ["10/01/2025 20:30"],
+      "button": "https://example.com/tickets"
+  },
+  {
+      "id": "CETTO",
       "nome": "Antonio Albanese",
       "spettacolo": "Personaggi",
       "date": [
-        "15-16-17/01/2025 - 20:30", "18/01/2025 - 18:00",
-        "22-23-24/01/2025 - 20:30", "25/01/2025 - 18:00",
-        "29-30-31/01/2025 - 20:30", "01/02/2025 - 18:00"
+          "15/01/2025 20:30", "16/01/2025 20:30", "17/01/2025 20:30",
+          "18/01/2025 18:00", "22/01/2025 20:30", "23/01/2025 20:30",
+          "24/01/2025 20:30", "25/01/2025 18:00", "29/01/2025 20:30",
+          "30/01/2025 20:30", "31/01/2025 20:30", "01/02/2025 18:00"
       ],
-      "button": "https://example.com/tickets/18"
+      "button": "https://example.com/tickets"
+  },
+    {
+        "id": "CETTO",
+        "nome": "Antonio Albanese",
+        "spettacolo": "Personaggi",
+        "date": [
+            "15-16-17/01/2025 20:30", "18/01/2025 18:00",
+            "22-23-24/01/2025 20:30", "25/01/2025 18:00",
+            "29-30-31/01/2025 20:30", "01/02/2025 18:00"
+        ],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "NONELARAI",
-      "nome": "Ambra Angiolini",
-      "spettacolo": "Olivia Denaro",
-      "date": ["11/02/2025 - 20:30", "12/02/2025 - 20:30"],
-      "button": "https://example.com/tickets/19"
+        "id": "DENARO",
+        "nome": "Ambra Angiolini",
+        "spettacolo": "Olivia Denaro",
+        "date": ["11/02/2025 20:30", "12/02/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "ILTRIO",
-      "nome": "Massimo Lopez e Tullio Solenghi",
-      "spettacolo": "Dove Eravamo Rimasti",
-      "date": ["13/02/2025 - 20:30", "14/02/2025 - 20:30"],
-      "button": "https://example.com/tickets/20"
+        "id": "TRIO",
+        "nome": "Massimo Lopez e Tullio Solenghi",
+        "spettacolo": "Dove Eravamo Rimasti",
+        "date": ["13/02/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "AUTOMOBILISTA",
-      "nome": "Gioele Dix",
-      "spettacolo": "Ma Per Fortuna Che C'Era Il Gaber",
-      "date": ["16/02/2025 - 18:00"],
-      "button": "https://example.com/tickets/21"
+        "id": "ZELIG",
+        "nome": "Gioele Dix",
+        "spettacolo": "Ma Per Fortuna Che C'era Il Gaber",
+        "date": ["16/02/2025 18:00"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "DEMOCRATICO",
-      "nome": "Walter Veltroni",
-      "spettacolo": "Le Emozioni Che Abbiamo Vissuto",
-      "date": ["19/02/2025 - 20:30"],
-      "button": "https://example.com/tickets/22"
+        "id": "ROMA",
+        "nome": "Walter Veltroni",
+        "spettacolo": "Le Emozioni Che Abbiamo Vissuto",
+        "date": ["19/02/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "CAUCASICO",
-      "nome": "Antonio Ornano",
-      "spettacolo": "Ornyfans",
-      "date": ["22/02/2025 - 20:30"],
-      "button": "https://example.com/tickets/23"
+        "id": "FANS",
+        "nome": "Antonio Ornano",
+        "spettacolo": "Ornyfans",
+        "date": ["22/02/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "VITABASSA",
-      "nome": "Giorgia Fumo",
-      "spettacolo": "Vita Bassa",
-      "date": ["26/02/2025 - 20:30"],
-      "button": "https://example.com/tickets/24"
+        "id": "VITA",
+        "nome": "Giorgia Fumo",
+        "spettacolo": "Vita Bassa",
+        "date": ["26/02/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "DARTAGNAN",
-      "nome": "I Tre Moschettieri",
-      "spettacolo": "Opera Pop",
-      "date": ["28/02/2025 - 20:30", "01/03/2025 - 16:00", "02/03/2025 - 16:00"],
-      "button": "https://example.com/tickets/25"
+        "id": "ATHOS",
+        "nome": "Il Tre Moschettieri",
+        "spettacolo": "Opera Pop",
+        "date": ["28/02/2025 20:30", "01/03/2025 16:00"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "NEVE",
-      "nome": "Slava",
-      "spettacolo": "Slava's Snowshow",
-      "date": ["05/03/2025 - 20:30", "06/03/2025 - 20:30", "07/03/2025 - 20:30", "08/03/2025 - 16:00", "08/03/2025 - 20:30", "09/03/2025 - 16:00"],
-      "button": "https://example.com/tickets/26"
+        "id": "NEVE",
+        "nome": "Slava",
+        "spettacolo": "Slava's Snowshow",
+        "date": ["Dal 5 al 7 marzo 2025 20:30", "8 marzo 2025 16:30", "9 marzo 2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "TATIANA",
-      "nome": "Gabriele Cirilli",
-      "spettacolo": "Cirilli & Family",
-      "date": ["10/03/2025 - 20:30"],
-      "button": "https://example.com/tickets/27"
+        "id": "KRUSKA",
+        "nome": "Gabriele Cirilli",
+        "spettacolo": "Cirilli & Family",
+        "date": ["10/03/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "VIANDANTE",
-      "nome": "Umberto Galimberti",
-      "spettacolo": "L'Io e il Noi. Il primato della relazione",
-      "date": ["13/03/2025 - 20:30"],
-      "button": "https://example.com/tickets/28"
+        "id": "PSICHE",
+        "nome": "Umberto Galimberti",
+        "spettacolo": "L'Io e i Noi. Il primo della relazione",
+        "date": ["13/03/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "BELISARI",
-      "nome": "Elio",
-      "spettacolo": "Quando un musicista ride",
-      "date": ["14/03/2025 - 20:30"],
-      "button": "https://example.com/tickets/29"
+        "id": "STORIE",
+        "nome": "Elio",
+        "spettacolo": "Quando un musicista ride",
+        "date": ["14/03/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "STREGA",
-      "nome": "Geppi Cucciari",
-      "spettacolo": "Perfetta",
-      "date": ["16/03/2025 - 18:00"],
-      "button": "https://example.com/tickets/30"
+        "id": "STREGA",
+        "nome": "Geppi Cucciari",
+        "spettacolo": "Perfetto",
+        "date": ["16/03/2025 18:00"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "FATTO",
-      "nome": "Marco Travaglio",
-      "spettacolo": "Nuovo Spettacolo",
-      "date": ["20/03/2025 - 20:30"],
-      "button": "https://example.com/tickets/31"
+        "id": "FATTO",
+        "nome": "Marco Travaglio",
+        "spettacolo": "Nuovo Spettacolo",
+        "date": ["20/03/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "PIERFERDI",
-      "nome": "Neri Marcorè",
-      "spettacolo": "La buona novella",
-      "date": ["25/03/2025 - 20:30", "26/03/2025 - 20:30"],
-      "button": "https://example.com/tickets/32"
+        "id": "PAPA",
+        "nome": "Neri Marcorè",
+        "spettacolo": "La buona novella",
+        "date": ["25-26/03/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "DOROTHY",
-      "nome": "Tootsie",
-      "spettacolo": "",
-      "date": ["28/03/2025 - 20:30", "29/03/2025 - 20:30", "30/03/2025 - 16:00"],
-      "button": "https://example.com/tickets/33"
+        "id": "DORSEY",
+        "nome": "Tootsie",
+        "spettacolo": "The Choir Of Man",
+        "date": ["28-29/03/2025 20:30", "30/03/2025 16:00"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "PUB",
-      "nome": "The Choir Of Man",
-      "spettacolo": "",
-      "date": ["02/04/2025"],
-      "button": "https://example.com/tickets/34"
+        "id": "PUB",
+        "nome": "Che Bar",
+        "spettacolo": "Dive Bar",
+        "date": ["04/04/2025 20:30"],
+        "button": "https://example.com/tickets"
     },
     {
-      "id": "BOOMERS",
-      "nome": "Marco Paolini",
-      "spettacolo": "Boomers",
-      "date": ["15/04/2025 - 20:30"],
-      "button": "https://example.com/tickets/35"
+        "id": "BOOMERS",
+        "nome": "Marco Paolini",
+        "spettacolo": "Boomers",
+        "date": ["15/04/2025 20:30"],
+        "button": "https://example.com/tickets"
     }
   ]
 }
+
+

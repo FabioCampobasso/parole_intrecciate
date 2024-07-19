@@ -1,42 +1,37 @@
 const words = [
-    "CRIMINE", "AMICO", "FUTBOL", "GIOVENTU", "ROSA", "FIABA", "FREUD", "THEWALL", "BODYSCEMI", 
-    "NAPOLI", "MISSITALIA", "DANZA", "GRAZIE", "CANZONACCE", "TUMTUMPA",
-    "OBLIO", "MARGUTTA", "EPIFANIO", "NONELARAI", "ILTRIO", "AUTOMOBILISTA", "DEMOCRATICO", "CAUCASICO", "VITABASSA", 
-    "DARTAGNAN", "NEVE", "TATIANA", "VIANDANTE", "BELISARI", "STREGA", "FATTO", "PIERFERDI", 
-    "DOROTHY", "PUB", "BOOMERS"
+"CRIME", "AMICO", "FUTBOL", "FRA", "ROSA", "FIABA", "FREUD", "WALL",
+"BODYSCEMI", "NAPOLI", "MISSITALIA", "DANZA", "GRAZIE", "MILANO",
+"BATTITO", "OBLIO", "RADIO", "CETTO", "DENARO", "TRIO", "ZELIG",
+"ROMA", "FANS", "VITA", "ATHOS", "NEVE", "KRUSKA", "PSICHE", "STORIE",
+"STREGA", "FATTO", "PAPA", "DORSEY", "PUB", "BOOMERS"
 ];
+
 
 
 const grid = [
-    ['G', 'X', 'T', 'N', 'A', 'P', 'O', 'L', 'I', 'X'],
-    ['B', 'I', 'X', 'H', 'A', 'F', 'R', 'E', 'U', 'D'],
-    ['O', 'B', 'O', 'C', 'E', 'M', 'X', 'X', 'U', 'G'],
-    ['D', 'T', 'E', 'V', 'R', 'W', 'I', 'X', 'X', 'R'],
-    ['Y', 'U', 'X', 'L', 'E', 'I', 'A', 'C', 'X', 'A'],
-    ['S', 'M', 'X', 'X', 'I', 'N', 'M', 'L', 'O', 'Z'],
-    ['C', 'T', 'X', 'X', 'E', 'S', 'T', 'I', 'L', 'I'],
-    ['E', 'U', 'A', 'V', 'X', 'X', 'A', 'U', 'N', 'E'],
-    ['M', 'M', 'E', 'X', 'X', 'X', 'X', 'R', 'X', 'E'],
-    ['I', 'P', 'F', 'U', 'T', 'B', 'O', 'L', 'I', 'X'],
-    ['C', 'A', 'N', 'Z', 'O', 'N', 'A', 'C', 'C', 'E'],
-    ['M', 'I', 'S', 'S', 'I', 'T', 'A', 'L', 'I', 'A'],
-    ['E', 'P', 'I', 'F', 'A', 'N', 'I', 'O', 'A', 'D'],
-    ['I', 'L', 'T', 'R', 'I', 'O', 'D', 'M', 'U', 'E'],
-    ['X', 'P', 'U', 'B', 'X', 'N', 'O', 'A', 'T', 'M'],
-    ['P', 'X', 'X', 'O', 'O', 'E', 'R', 'R', 'O', 'O'],
-    ['I', 'X', 'F', 'O', 'B', 'L', 'O', 'G', 'M', 'C'],
-    ['E', 'D', 'I', 'M', 'L', 'A', 'T', 'U', 'O', 'R'],
-    ['R', 'F', 'A', 'E', 'I', 'R', 'H', 'T', 'B', 'A'],
-    ['F', 'A', 'B', 'R', 'O', 'A', 'Y', 'T', 'I', 'T'],
-    ['E', 'T', 'A', 'S', 'T', 'I', 'X', 'A', 'L', 'I'],
-    ['R', 'T', 'A', 'T', 'I', 'A', 'N', 'A', 'I', 'C'],
-    ['D', 'O', 'S', 'T', 'R', 'E', 'G', 'A', 'S', 'O'],
-    ['I', 'V', 'I', 'A', 'N', 'D', 'A', 'N', 'T', 'E'],
-    ['V', 'I', 'T', 'A', 'B', 'A', 'S', 'S', 'A', 'X'],
-    ['C', 'A', 'U', 'C', 'A', 'S', 'I', 'C', 'O', 'N'],
-    ['X', 'X', 'X', 'D', 'A', 'N', 'Z', 'A', 'X', 'X']
+    ['F', 'A', 'T', 'T', 'O', 'X', 'X', 'P', 'X', 'L'],
+    ['X', 'M', 'F', 'C', 'X', 'A', 'U', 'X', 'O', 'P'],
+    ['B', 'X', 'I', 'R', 'R', 'B', 'T', 'B', 'X', 'X'],
+    ['X', 'O', 'X', 'L', 'E', 'I', 'T', 'H', 'X', 'X'],
+    ['S', 'G', 'D', 'X', 'A', 'U', 'M', 'N', 'O', 'X'],
+    ['T', 'N', 'R', 'Y', 'F', 'N', 'D', 'E', 'V', 'S'],
+    ['O', 'A', 'D', 'A', 'S', 'A', 'O', 'V', 'I', 'Z'],
+    ['R', 'P', 'G', 'A', 'Z', 'C', 'N', 'E', 'T', 'E'],
+    ['I', 'O', 'R', 'E', 'N', 'I', 'E', 'S', 'A', 'L'],
+    ['E', 'L', 'S', 'A', 'R', 'Z', 'E', 'M', 'R', 'I'],
+    ['X', 'I', 'X', 'X', 'D', 'T', 'A', 'O', 'I', 'G'],
+    ['M', 'X', 'D', 'O', 'X', 'I', 'S', 'C', 'B', 'F'],
+    ['P', 'I', 'X', 'O', 'B', 'A', 'O', 'E', 'O', 'R'],
+    ['X', 'S', 'S', 'X', 'R', 'L', 'X', 'T', 'O', 'A'],
+    ['X', 'X', 'I', 'S', 'X', 'S', 'I', 'T', 'M', 'X'],
+    ['A', 'X', 'B', 'C', 'I', 'R', 'E', 'O', 'E', 'F'],
+    ['T', 'M', 'D', 'A', 'H', 'T', 'O', 'Y', 'R', 'I'],
+    ['P', 'R', 'I', 'E', 'T', 'E', 'A', 'M', 'S', 'A'],
+    ['W', 'A', 'I', 'C', 'N', 'T', 'X', 'L', 'A', 'B'],
+    ['A', 'X', 'P', 'O', 'O', 'A', 'I', 'X', 'I', 'A'],
+    ['L', 'X', 'X', 'A', 'X', 'X', 'R', 'T', 'X', 'A'],
+    ['L', 'K', 'R', 'U', 'S', 'K', 'A', 'O', 'O', 'X']   
 ];
-
 
 
 let selectedCells = [];
