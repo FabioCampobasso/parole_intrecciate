@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var overlayDesktop = document.getElementById('overlay-desktop');
+
+    function checkDevice() {
+        if (window.innerWidth > 768) { // Assuming 'mobile' is any screen smaller than 768px
+            overlayDesktop.classList.add('active');
+        } else {
+            overlayDesktop.classList.remove('active');
+        }
+    }
+
+    window.addEventListener('resize', checkDevice); // Check on resize
+    checkDevice(); // Initial check
+});
+
 const words = [
 "CRIME", "AMICO", "FUTBOL", "FRA", "ROSA", "FIABA", "FREUD", "WALL",
 "BODYSCEMI", "NAPOLI", "MISSITALIA", "DANZA", "GRAZIE", "MILANO",
